@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import axios from "../config/axiosconig";
 import { useNavigate } from "react-router-dom";
 import { isAxiosError } from "axios";
-import logo from "../assets/newlog.png";
+import logo from "../assets/genuxMain.png";
 
 const SignUp = () => {
   const { theme } = useTheme();
@@ -110,8 +110,8 @@ const SignUp = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className={`max-w-lg w-full rounded-2xl shadow-xl overflow-hidden transition-colors duration-500 ${
-          isDark 
-            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700" 
+          isDark
+            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700"
             : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
         }`}
       >

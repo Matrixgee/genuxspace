@@ -90,15 +90,15 @@ const Login = () => {
   return (
     <div
       className={`min-h-screen transition-colors duration-300 flex items-center justify-center py-12 px-4 ${
-        isDark 
-          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800" 
+        isDark
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
           : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div
         className={`max-w-md w-full space-y-8 p-10 max-md:p-4 rounded-xl shadow-2xl transition-colors duration-300 ${
-          isDark 
-            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700" 
+          isDark
+            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700"
             : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
         }`}
       >
