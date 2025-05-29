@@ -9,7 +9,7 @@ const ContactUs = () => {
     {
       icon: "📧",
       title: "Email Us",
-      value: "support@GenuxSpacex.com",
+      value: "support@Genuspace.com",
       description: "Get in touch for general inquiries",
     },
     {

@@ -93,16 +93,16 @@ const SignUp = () => {
 
   const inputClasses = `w-full px-4 py-3 rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 ${
     isDark
-      ? "bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:ring-purple-500 focus:border-purple-500"
-      : "bg-white border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500"
+      ? "bg-gray-800 border-purple-600 text-purple-100 placeholder-purple-300 focus:ring-purple-500 focus:border-purple-500"
+      : "bg-white border-purple-200 text-gray-900 placeholder-gray-500 focus:ring-purple-500 focus:border-purple-500"
   }`;
 
   return (
     <div
       className={`min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
         isDark
-          ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
-          : "bg-gradient-to-br from-blue-50 via-gray-50 to-blue-50"
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <motion.div
@@ -110,14 +110,16 @@ const SignUp = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className={`max-w-lg w-full rounded-2xl shadow-xl overflow-hidden transition-colors duration-500 ${
-          isDark ? "bg-gray-800" : "bg-white"
+          isDark 
+            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700" 
+            : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
         }`}
       >
-        <div className="p-8 sm:p-10">
+        <div className="p-8 max-md:p-4 sm:p-10">
           <div className="flex flex-col items-center mb-8">
             <div
-              className={`h-20 w-20 rounded-full flex items-center justify-center mb-4 ${
-                isDark ? "bg-white" : "bg-blue-500"
+              className={`h-20 w-20 rounded-full flex items-center justify-center mb-4 cursor-pointer ${
+                isDark ? "bg-purple-800/40" : "bg-purple-50"
               }`}
               onClick={() => navigate("/")}
             >
@@ -127,14 +129,14 @@ const SignUp = () => {
             </div>
             <h2
               className={`text-center text-3xl font-bold mb-2 ${
-                isDark ? "text-white" : "text-gray-900"
+                isDark ? "text-purple-200" : "text-gray-800"
               }`}
             >
               Create Account
             </h2>
             <p
               className={`text-center ${
-                isDark ? "text-gray-400" : "text-gray-600"
+                isDark ? "text-purple-100" : "text-gray-600"
               }`}
             >
               Fill in your details below
@@ -203,7 +205,7 @@ const SignUp = () => {
               <button
                 type="button"
                 className={`absolute right-3 top-[.85rem] ${
-                  isDark ? "text-gray-400" : "text-gray-500"
+                  isDark ? "text-purple-300" : "text-purple-500"
                 }`}
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -224,7 +226,7 @@ const SignUp = () => {
               <button
                 type="button"
                 className={`absolute right-3 top-[.85rem] ${
-                  isDark ? "text-gray-400" : "text-gray-500"
+                  isDark ? "text-purple-300" : "text-purple-500"
                 }`}
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
@@ -239,8 +241,8 @@ const SignUp = () => {
                 type="checkbox"
                 className={`h-4 w-4 rounded focus:ring-2 ${
                   isDark
-                    ? "bg-gray-700 border-gray-600 text-purple-500 focus:ring-purple-500"
-                    : "border-gray-300 text-blue-600 focus:ring-blue-500"
+                    ? "bg-gray-700 border-purple-600 text-purple-500 focus:ring-purple-500"
+                    : "border-purple-200 text-purple-600 focus:ring-purple-500"
                 }`}
                 checked={termsAccepted}
                 onChange={(e) => setTermsAccepted(e.target.checked)}
@@ -248,15 +250,15 @@ const SignUp = () => {
               <label
                 htmlFor="terms"
                 className={`ml-3 text-sm ${
-                  isDark ? "text-gray-300" : "text-gray-700"
+                  isDark ? "text-purple-200" : "text-gray-500"
                 }`}
               >
                 I agree with the{" "}
-                <a href="#" className="text-blue-500 hover:underline">
+                <a href="#" className="text-purple-500 hover:underline">
                   Privacy Policy
                 </a>{" "}
                 and{" "}
-                <a href="#" className="text-blue-500 hover:underline">
+                <a href="#" className="text-purple-500 hover:underline">
                   Terms & Conditions
                 </a>
               </label>
@@ -267,11 +269,9 @@ const SignUp = () => {
               disabled={loading}
               className={`w-full inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg shadow-sm text-white ${
                 isDark
-                  ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                  : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
-              } focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-                isDark ? "focus:ring-purple-500" : "focus:ring-blue-500"
-              } transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed`}
+                  ? "bg-purple-600 hover:bg-purple-700"
+                  : "bg-purple-600 hover:bg-purple-700"
+              } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed`}
               whileHover={{ scale: loading ? 1 : 1.03 }}
               whileTap={{ scale: loading ? 1 : 0.98 }}
             >
@@ -288,15 +288,13 @@ const SignUp = () => {
           <div className="mt-6 text-center">
             <p
               className={`text-sm ${
-                isDark ? "text-gray-400" : "text-gray-600"
+                isDark ? "text-purple-200" : "text-gray-500"
               }`}
             >
               Already have an account?{" "}
               <a
                 href="/auth/login"
-                className={`font-medium ${
-                  isDark ? "text-purple-400" : "text-blue-500"
-                } hover:underline`}
+                className="font-medium text-purple-500 hover:underline"
               >
                 Sign in
               </a>

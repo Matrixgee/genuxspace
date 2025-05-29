@@ -40,27 +40,25 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`${
-        scrolled
-          ? isDark
-            ? "bg-gray-800/95 backdrop-blur-md shadow-lg"
-            : "bg-white/95 backdrop-blur-md shadow-lg"
-          : isDark
-          ? "bg-gray-800"
-          : "bg-white"
-      } ${
-        isDark ? "text-purple-100" : "text-gray-800"
-      } fixed z-[99] transition-all duration-300`}
-      style={{
-        width: "100%",
-        height: "10vh",
-        top: 0,
-        left: 0,
-      }}
-    >
+ <header
+  className={`fixed z-[99] transition-all duration-300 backdrop-blur-md shadow-lg ${
+    isDark
+      ? "bg-purple-900 text-purple-100"
+      : scrolled
+      ? "bg-white/20 text-gray-800"
+      : "bg-white/90 text-gray-800"
+  }`}
+  style={{
+    width: "100%",
+    height: "10vh",
+    top: 0,
+    left: 0,
+  }}
+>
+
+
       <div
-        className="flex items-center justify-between px-6 lg:px-8"
+        className="flex items-center justify-between lg:px-8"
         style={{
           width: "100%",
           height: "100%",
@@ -68,21 +66,15 @@ const Header = () => {
       >
         {/* Logo */}
         <div
-          className="flex justify-center items-center cursor-pointer"
-          style={{
-            width: "30%",
-            height: "100%",
-          }}
+          className="flex justify-start w-[30%] h-[100%]  max-md:w-[60%] items-center cursor-pointer"
+         
           onClick={() => navigate("/")}
         >
           <img
             src={logo}
             alt="Logo"
-            className="object-cover"
-            style={{
-              width: "70%",
-              height: "70%",
-            }}
+            className="object-cover w-[70%] h-[70%] max-md:w-[100%] mr-10"
+           
           />
         </div>
 
