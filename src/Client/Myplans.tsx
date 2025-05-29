@@ -34,7 +34,7 @@ const Myplans = () => {
     try {
       toast.loading("Fetching your investment plans...");
       const response = await axios.get(
-        `https://hexg.onrender.com/api/user/getAllInvestmentPlans/${userId}`,
+        `https://gen-75n5.onrender.com/apiuser/getAllInvestmentPlans/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${userToken}`,

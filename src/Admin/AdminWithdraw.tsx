@@ -11,7 +11,7 @@ const AdminWithdraw = () => {
   const fetchWithdrawals = async () => {
     try {
       const response = await axios.get(
-        "https://hexg.onrender.com/api/admin/getWithdrawals",
+        "https://gen-75n5.onrender.com/apiadmin/getWithdrawals",
         {
           headers: {
             Authorization: `Bearer ${userToken}`,
@@ -32,7 +32,7 @@ const AdminWithdraw = () => {
     const toastId = toast.loading("Approving...");
     try {
       const response = await axios.put(
-        `https://hexg.onrender.com/api/admin/approveWithdrawal/${_id}`,
+        `https://gen-75n5.onrender.com/apiadmin/approveWithdrawal/${_id}`,
         { status: "approved" },
         {
           headers: {
@@ -53,7 +53,7 @@ const AdminWithdraw = () => {
     const toastId = toast.loading("Declining...");
     try {
       const response = await axios.put(
-        `https://hexg.onrender.com/api/admin/declineWithdrawal/${_id}`,
+        `https://gen-75n5.onrender.com/apiadmin/declineWithdrawal/${_id}`,
         { status: "rejected" },
         {
           headers: {
@@ -74,7 +74,7 @@ const AdminWithdraw = () => {
     const toastId = toast.loading("Marking as processing...");
     try {
       const response = await axios.put(
-        `https://hexg.onrender.com/api/admin/pendingWithdrawal/${_id}`,
+        `https://gen-75n5.onrender.com/apiadmin/pendingWithdrawal/${_id}`,
         { status: "processing" },
         {
           headers: {

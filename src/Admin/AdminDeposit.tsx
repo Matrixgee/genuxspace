@@ -40,7 +40,7 @@ const AdminDeposit = () => {
   };
 
   const getAllTransactions = async () => {
-    const url = "https://hexg.onrender.com/api/admin/allTransactions";
+    const url = "https://gen-75n5.onrender.com/apiadmin/allTransactions";
     try {
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${userToken}` },
@@ -61,7 +61,7 @@ const AdminDeposit = () => {
   }, [dispatch, userToken]);
 
   const confirmDeposit = async (transactionId: string) => {
-    const confirmUrl = `https://hexg.onrender.com/api/admin/approveDeposit/${transactionId}`;
+    const confirmUrl = `https://gen-75n5.onrender.com/apiadmin/approveDeposit/${transactionId}`;
     try {
       await axios.put(
         confirmUrl,
@@ -81,7 +81,7 @@ const AdminDeposit = () => {
   };
 
   const handleDecline = async (transactionId: string) => {
-    const declineUrl = `https://hexg.onrender.com/api/admin/declineDeposit/${transactionId}`;
+    const declineUrl = `https://gen-75n5.onrender.com/apiadmin/declineDeposit/${transactionId}`;
     try {
       await axios.put(
         declineUrl,

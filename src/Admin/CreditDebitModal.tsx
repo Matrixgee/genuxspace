@@ -59,7 +59,7 @@ const CreditDebitModal: React.FC<CreditDebitModalProps> = ({
     const toastLoadingId = toast.loading("Please wait...");
     setCreditLoading(true);
     try {
-      const url = `https://hexg.onrender.com/api/admin/creditOrDebit/${_id}`;
+      const url = `https://gen-75n5.onrender.com/apiadmin/creditOrDebit/${_id}`;
       const token = userToken;
       const headers = {
         Authorization: `Bearer ${token}`,
