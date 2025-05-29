@@ -49,7 +49,7 @@
 //     const getAllUsers = async () => {
 //         if (!userToken) return;
 
-//         const url = 'https://hexg.onrender.com/api/admin/getAllUser';
+//         const url = 'https://gen-75n5.onrender.com/apiadmin/getAllUser';
 //         const headers = {
 //             Authorization: `Bearer ${userToken}`,
 //         };
@@ -74,7 +74,7 @@
 //         const toastLoadingId = toast.loading('Please wait...');
 //         try {
 //             setLoading(true);
-//             const url = `https://hexg.onrender.com/api/admin/verifyUser/${_id}`;
+//             const url = `https://gen-75n5.onrender.com/apiadmin/verifyUser/${_id}`;
 //             const headers = {
 //                 Authorization: `Bearer ${userToken}`,
 //             };
@@ -97,7 +97,7 @@
 //         const toastLoadingId = toast.loading('Please wait...');
 //         try {
 //             setDeleteLoading(true);
-//             const url = `https://hexg.onrender.com/api/admin/deleteOneUser/${_id}`;
+//             const url = `https://gen-75n5.onrender.com/apiadmin/deleteOneUser/${_id}`;
 //             const headers = {
 //                 Authorization: `Bearer ${userToken}`,
 //             };

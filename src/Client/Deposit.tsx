@@ -31,7 +31,7 @@ const Deposit = () => {
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
-    const apiUrl = `https://hexg.onrender.com/api/user/getPostByName/${type}`;
+    const apiUrl = `https://gen-75n5.onrender.com/apiuser/getPostByName/${type}`;
 
     try {
       const response = await axios.get(apiUrl, { headers });
@@ -116,7 +116,7 @@ const Deposit = () => {
     const toastLoadingId = toast.loading("Deposit Processing...");
     try {
       const response = await axios.post(
-        "https://hexg.onrender.com/api/user/deposit",
+        "https://gen-75n5.onrender.com/apiuser/deposit",
         formData,
         {
           headers: {

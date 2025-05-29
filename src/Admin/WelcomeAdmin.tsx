@@ -14,7 +14,7 @@ const WelcomeAdmin = () => {
 
   const [loading, setloading] = useState(false);
 
-  const url = "https://hexg.onrender.com/api/admin/AdminDashboard";
+  const url = "https://gen-75n5.onrender.com/apiadmin/AdminDashboard";
 
   const HandlegetDashboard = async () => {
     setloading(true);

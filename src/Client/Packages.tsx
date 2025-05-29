@@ -19,7 +19,7 @@ const Packages = () => {
     const getAllPlans = async () => {
       try {
         const response = await axios.get(
-          "https://hexg.onrender.com/api/user/getAllPlans"
+          "https://gen-75n5.onrender.com/apiuser/getAllPlans"
         );
         dispatch(setPlan(response.data));
         setLoading(false);
@@ -44,7 +44,7 @@ const Packages = () => {
     const loadingToast = toast.loading("Joining plan...");
     try {
       const response = await axios.post(
-        `https://hexg.onrender.com/api/user/invest/${userId}`,
+        `https://gen-75n5.onrender.com/apiuser/invest/${userId}`,
         {
           planName: plan.planName,
           amount,

@@ -1,4 +1,4 @@
-import Logo from "../assets/newlog.png";
+import Logo from "../assets/genuxLogo.png";
 import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -46,17 +46,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#05060f] text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#1f0a3d] text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Logo and Contact Info */}
           <div className="space-y-6">
-            <div className="w-40 h-[120px]">
+            <div className="w-40 h-[180px]">
               <img
                 src={Logo}
-                alt="DeFi Sky-Space"
-                className="w-full h-full object-contain"
+                alt="GenuxSpace"
+                className="w-[100%] h-full max-md:w-[100%] object-contain"
               />
             </div>
             <div className="space-y-4">

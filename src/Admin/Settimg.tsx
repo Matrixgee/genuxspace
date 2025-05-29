@@ -42,7 +42,7 @@ const Setting: React.FC = () => {
   const getPaymentGateways = async () => {
     try {
       const response = await axios.get(
-        "https://hexg.onrender.com/api/admin/getPost",
+        "https://gen-75n5.onrender.com/apiadmin/getPost",
         { headers }
       );
       dispatch(setPaymentGateways(response.data.data));
@@ -105,7 +105,7 @@ const Setting: React.FC = () => {
       if (qrCodeFile) formData.append("image", qrCodeFile);
 
       const response = await axios.post(
-        "https://hexg.onrender.com/api/admin/postWay",
+        "https://gen-75n5.onrender.com/apiadmin/postWay",
         formData,
         { headers }
       );
@@ -123,7 +123,7 @@ const Setting: React.FC = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://hexg.onrender.com/api/admin/roles",
+        "https://gen-75n5.onrender.com/apiadmin/roles",
         { adminRole },
         { headers }
       );
@@ -147,7 +147,7 @@ const Setting: React.FC = () => {
     const toastLoadingId = toast.loading("Please wait while deleting ");
     try {
       await axios.delete(
-        `https://hexg.onrender.com/api/admin/deletePost/${deleteId}`,
+        `https://gen-75n5.onrender.com/apiadmin/deletePost/${deleteId}`,
         { headers }
       );
       dispatch(

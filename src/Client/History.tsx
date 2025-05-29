@@ -23,7 +23,7 @@ const History: React.FC = () => {
     const getHistory = async () => {
       try {
         const response = await axios.get(
-          "https://hexg.onrender.com/api/user/history",
+          "https://gen-75n5.onrender.com/apiuser/history",
           {
             headers: { Authorization: `Bearer ${userToken}` },
           }
