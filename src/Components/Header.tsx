@@ -43,9 +43,13 @@ const Header = () => {
     <header
       className={`${
         scrolled
-          ? "bg-white/95 dark:bg-black/95 backdrop-blur-md shadow-lg"
-          : "bg-white dark:bg-black"
-      } text-gray-800 dark:text-white fixed z-[99] transition-all duration-300`}
+          ? isDark
+            ? "bg-gray-800/95 backdrop-blur-md shadow-lg"
+            : "bg-white/95 backdrop-blur-md shadow-lg"
+          : isDark
+          ? "bg-gray-800"
+          : "bg-white"
+      } ${isDark ? "text-purple-100" : "text-gray-800"} fixed z-[99] transition-all duration-300`}
       style={{
         width: "100%",
         height: "10vh",
@@ -89,8 +93,12 @@ const Header = () => {
               className={({ isActive }) =>
                 `rounded-lg transition-colors ${
                   isActive
-                    ? "text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-900/30"
-                    : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? isDark
+                      ? "text-purple-300 font-semibold bg-purple-800/40"
+                      : "text-purple-600 font-semibold bg-purple-50"
+                    : isDark
+                    ? "text-purple-100 hover:bg-gray-700 hover:text-purple-200"
+                    : "text-gray-600 hover:bg-purple-50 hover:text-purple-600"
                 }`
               }
               style={{
@@ -110,8 +118,8 @@ const Header = () => {
             onClick={toggleTheme}
             className={`rounded-full transition-colors ${
               isDark
-                ? "bg-gray-800 text-yellow-400 hover:bg-gray-700"
-                : "bg-blue-50 text-blue-600 hover:bg-blue-100"
+                ? "bg-purple-800/40 text-yellow-400 hover:bg-purple-700/40"
+                : "bg-purple-50 text-purple-600 hover:bg-purple-100"
             }`}
             style={{
               padding: "10px",
@@ -126,7 +134,7 @@ const Header = () => {
           {/* Get Started Button */}
           <button
             onClick={() => navigate("/auth/register")}
-            className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all"
+            className="bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             style={{
               padding: "10px 20px",
               height: "44px",
@@ -143,8 +151,8 @@ const Header = () => {
             onClick={toggleTheme}
             className={`rounded-full ${
               isDark
-                ? "bg-gray-800 text-yellow-400"
-                : "bg-blue-50 text-blue-600"
+                ? "bg-purple-800/40 text-yellow-400"
+                : "bg-purple-50 text-purple-600"
             }`}
             style={{
               padding: "8px",
@@ -161,8 +169,12 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`rounded-lg transition-colors ${
               mobileMenuOpen
-                ? "bg-gray-200 dark:bg-gray-800"
-                : "text-gray-800 dark:text-gray-200"
+                ? isDark
+                  ? "bg-purple-800/40"
+                  : "bg-purple-100"
+                : isDark
+                ? "text-purple-100"
+                : "text-gray-800"
             }`}
             style={{
               padding: "8px",
@@ -174,12 +186,12 @@ const Header = () => {
             {mobileMenuOpen ? (
               <RiCloseLine
                 size={24}
-                className="text-blue-600 dark:text-blue-400"
+                className={isDark ? "text-purple-300" : "text-purple-600"}
               />
             ) : (
               <RiMenu4Line
                 size={24}
-                className="text-gray-800 dark:text-gray-200"
+                className={isDark ? "text-purple-100" : "text-gray-800"}
               />
             )}
           </button>
@@ -200,8 +212,13 @@ const Header = () => {
         }}
       >
         <div
-          className={`border-t ${isDark ? "border-gray-800" : "border-gray-200"}
-          bg-white dark:bg-gray-900 shadow-xl rounded-b-xl`}
+          className={`border-t ${
+            isDark ? "border-purple-700" : "border-purple-150"
+          } ${
+            isDark
+              ? "bg-gray-800"
+              : "bg-white"
+          } shadow-xl rounded-b-xl`}
           style={{
             width: "100%",
             paddingBottom: "16px",
@@ -228,8 +245,12 @@ const Header = () => {
                   className={({ isActive }) =>
                     `rounded-lg ${
                       isActive
-                        ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium"
-                        : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        ? isDark
+                          ? "bg-purple-800/40 text-purple-300 font-medium"
+                          : "bg-purple-50 text-purple-600 font-medium"
+                        : isDark
+                        ? "text-purple-100 hover:bg-gray-700 hover:text-purple-200"
+                        : "text-gray-600 hover:bg-purple-50 hover:text-purple-600"
                     }`
                   }
                   style={{
@@ -244,7 +265,7 @@ const Header = () => {
             {/* CTA Button */}
             <button
               onClick={() => navigate("/auth/login")}
-              className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all"
+              className="bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
               style={{
                 width: "100%",
                 padding: "12px 20px",

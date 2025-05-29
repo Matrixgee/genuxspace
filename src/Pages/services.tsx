@@ -37,7 +37,7 @@ const Services = () => {
         "Performance tracking",
         "Rebalancing",
       ],
-      gradient: "from-blue-500 to-cyan-600",
+      gradient: "from-purple-500 to-purple-600",
     },
     {
       icon: <FaShieldAlt className="w-8 h-8" />,
@@ -50,7 +50,7 @@ const Services = () => {
         "Cold storage",
         "Insurance coverage",
       ],
-      gradient: "from-green-500 to-emerald-600",
+      gradient: "from-purple-600 to-purple-700",
     },
     {
       icon: <FaRobot className="w-8 h-8" />,
@@ -63,7 +63,7 @@ const Services = () => {
         "Risk assessment",
         "Automated alerts",
       ],
-      gradient: "from-purple-500 to-pink-600",
+      gradient: "from-purple-700 to-purple-800",
     },
     {
       icon: <FaGlobe className="w-8 h-8" />,
@@ -76,7 +76,7 @@ const Services = () => {
         "Commodities",
         "Crypto assets",
       ],
-      gradient: "from-orange-500 to-red-600",
+      gradient: "from-purple-500 to-purple-700",
     },
   ];
 
@@ -86,7 +86,7 @@ const Services = () => {
       title: "24/7 Customer Support",
       description: "Round-the-clock support from our expert team",
       features: ["Live chat", "Phone support", "Email assistance"],
-      gradient: "from-indigo-500 to-blue-600",
+      gradient: "from-purple-500 to-purple-600",
     },
 
     {
@@ -94,14 +94,14 @@ const Services = () => {
       title: "Smart Notifications",
       description: "Intelligent alerts for market opportunities",
       features: ["Price alerts", "News updates", "Portfolio alerts"],
-      gradient: "from-cyan-500 to-blue-600",
+      gradient: "from-purple-600 to-purple-700",
     },
     {
       icon: <FaHandshake className="w-6 h-6" />,
       title: "Dedicated Account Manager",
       description: "Personal relationship manager for premium clients",
       features: ["Personal advisor", "Priority support", "Custom strategies"],
-      gradient: "from-violet-500 to-purple-600",
+      gradient: "from-purple-700 to-purple-800",
     },
   ];
 
@@ -132,8 +132,8 @@ const Services = () => {
     <div
       className={`w-full py-20 px-4 md:px-8 lg:px-16 ${
         isDark
-          ? "bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
-          : "bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div className="container mx-auto">
@@ -148,26 +148,26 @@ const Services = () => {
           <span
             className={`inline-block py-3 px-6 rounded-full text-sm font-bold tracking-wider mb-6 ${
               isDark
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                : "bg-gradient-to-r from-primary to-blue-600 text-white"
+                ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
+                : "bg-gradient-to-r from-purple-500 to-purple-600 text-white"
             }`}
           >
             OUR SERVICES
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className={isDark ? "text-white" : "text-gray-800"}>
+            <span className={isDark ? "text-purple-200" : "text-gray-800"}>
               Comprehensive
             </span>
             <br />
-            <span className={isDark ? "text-blue-400" : "text-primary"}>
+            <span className="text-purple-500">
               Financial Solutions
             </span>
           </h1>
 
           <p
             className={`text-lg md:text-xl max-w-3xl mx-auto ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             We provide a complete suite of investment services designed to help
@@ -193,8 +193,8 @@ const Services = () => {
               }}
               className={`rounded-2xl p-8 ${
                 isDark
-                  ? "bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700"
-                  : "bg-white border border-gray-200"
+                  ? "bg-gradient-to-br from-gray-700 to-gray-800 border border-purple-700"
+                  : "bg-gradient-to-br from-white to-purple-25 border border-purple-150"
               } shadow-xl hover:shadow-2xl transition-all duration-300`}
             >
               <div className="flex items-start space-x-6">
@@ -207,7 +207,7 @@ const Services = () => {
                 <div className="flex-1">
                   <h3
                     className={`text-2xl font-bold mb-3 ${
-                      isDark ? "text-white" : "text-gray-800"
+                      isDark ? "text-purple-200" : "text-gray-800"
                     }`}
                   >
                     {service.title}
@@ -215,7 +215,7 @@ const Services = () => {
 
                   <p
                     className={`text-base mb-4 ${
-                      isDark ? "text-gray-300" : "text-gray-600"
+                      isDark ? "text-purple-100" : "text-gray-600"
                     }`}
                   >
                     {service.description}
@@ -229,7 +229,7 @@ const Services = () => {
                         ></div>
                         <span
                           className={`text-sm ${
-                            isDark ? "text-gray-400" : "text-gray-500"
+                            isDark ? "text-purple-200" : "text-gray-500"
                           }`}
                         >
                           {feature}
@@ -253,14 +253,14 @@ const Services = () => {
         >
           <h2
             className={`text-3xl md:text-4xl font-bold mb-4 ${
-              isDark ? "text-white" : "text-gray-800"
+              isDark ? "text-purple-200" : "text-gray-800"
             }`}
           >
             Additional Services
           </h2>
           <p
             className={`text-lg max-w-2xl mx-auto ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Explore our comprehensive range of supporting services designed to
@@ -285,19 +285,21 @@ const Services = () => {
               }}
               className={`rounded-xl p-6 ${
                 isDark
-                  ? "bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700"
-                  : "bg-white border border-gray-200"
+                  ? "bg-gradient-to-br from-gray-700 to-gray-800 border border-purple-700"
+                  : "bg-gradient-to-br from-white to-purple-25 border border-purple-150"
               } shadow-lg hover:shadow-xl transition-all duration-300`}
             >
               <div
-                className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${service.gradient} mb-4`}
+                className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${
+                  isDark ? "bg-purple-800/40" : "bg-purple-50"
+                } mb-4`}
               >
-                <div className="text-white">{service.icon}</div>
+                <div className={`${isDark ? "text-purple-400" : "text-purple-600"}`}>{service.icon}</div>
               </div>
 
               <h3
                 className={`text-xl font-bold mb-2 ${
-                  isDark ? "text-white" : "text-gray-800"
+                  isDark ? "text-purple-200" : "text-gray-800"
                 }`}
               >
                 {service.title}
@@ -305,7 +307,7 @@ const Services = () => {
 
               <p
                 className={`text-sm mb-4 ${
-                  isDark ? "text-gray-300" : "text-gray-600"
+                  isDark ? "text-purple-100" : "text-gray-600"
                 }`}
               >
                 {service.description}
@@ -319,7 +321,7 @@ const Services = () => {
                     ></div>
                     <span
                       className={`text-xs ${
-                        isDark ? "text-gray-400" : "text-gray-500"
+                        isDark ? "text-purple-200" : "text-gray-500"
                       }`}
                     >
                       {feature}
@@ -337,11 +339,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className={`rounded-2xl p-8 md:p-12 ${
-            isDark
-              ? "bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900"
-              : "bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600"
-          }`}
+          className="rounded-2xl p-8 md:p-12 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800"
         >
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -375,14 +373,14 @@ const Services = () => {
         >
           <h3
             className={`text-2xl md:text-3xl font-bold mb-6 ${
-              isDark ? "text-white" : "text-gray-800"
+              isDark ? "text-purple-200" : "text-gray-800"
             }`}
           >
             Ready to Get Started?
           </h3>
           <p
             className={`text-lg mb-8 ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Join thousands of satisfied investors who trust our services for
@@ -390,11 +388,7 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              className={`px-8 py-4 rounded-lg font-medium text-lg transition-all ${
-                isDark
-                  ? "bg-blue-600 hover:bg-blue-700 text-white"
-                  : "bg-primary hover:bg-blue-600 text-white"
-              }`}
+              className="px-8 py-4 rounded-lg font-medium text-lg transition-all bg-purple-600 hover:bg-purple-700 text-white focus:ring-2 focus:ring-purple-500"
               onClick={() => navigate("/auth/register")}
             >
               Start Investing Today

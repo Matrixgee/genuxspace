@@ -89,8 +89,8 @@ const Testimonials = () => {
     <div
       className={`w-full py-20 px-4 md:px-8 lg:px-16 ${
         isDark
-          ? "bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
-          : "bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div className="container mx-auto">
@@ -105,25 +105,25 @@ const Testimonials = () => {
           <span
             className={`inline-block py-3 px-6 rounded-full text-sm font-bold tracking-wider mb-6 ${
               isDark
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                : "bg-gradient-to-r from-blue-300 to-blue-600 text-white"
+                ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
+                : "bg-gradient-to-r from-purple-500 to-purple-600 text-white"
             }`}
           >
             CLIENT TESTIMONIALS
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            <span className={isDark ? "text-white" : "text-gray-800"}>
+            <span className={isDark ? "text-purple-200" : "text-gray-800"}>
               INVESTORS
             </span>{" "}
-            <span className={isDark ? "text-blue-400" : "text-primary"}>
+            <span className="text-purple-500">
               TESTIMONIALS
             </span>
           </h2>
 
           <p
             className={`text-lg md:text-xl max-w-4xl mx-auto ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Here are a few words from our most trusted investors. These words
@@ -150,19 +150,19 @@ const Testimonials = () => {
               }}
               className={`relative rounded-2xl p-8 ${
                 isDark
-                  ? "bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700"
-                  : "bg-white border border-gray-200"
+                  ? "bg-gradient-to-br from-gray-700 to-gray-800 border border-purple-700"
+                  : "bg-gradient-to-br from-white to-purple-25 border border-purple-150"
               } shadow-xl hover:shadow-2xl transition-all duration-300`}
             >
               {/* Quote Icon */}
               <div
                 className={`absolute top-6 right-6 w-12 h-12 rounded-full flex items-center justify-center ${
-                  isDark ? "bg-blue-900/50" : "bg-blue-100"
+                  isDark ? "bg-purple-800/40" : "bg-purple-50"
                 }`}
               >
                 <FaQuoteLeft
                   className={`w-5 h-5 ${
-                    isDark ? "text-blue-400" : "text-primary"
+                    isDark ? "text-purple-400" : "text-purple-600"
                   }`}
                 />
               </div>
@@ -178,8 +178,8 @@ const Testimonials = () => {
                   <div
                     className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${
                       isDark
-                        ? "bg-blue-600 text-white"
-                        : "bg-primary text-white"
+                        ? "bg-purple-600 text-white"
+                        : "bg-purple-500 text-white"
                     }`}
                   >
                     ✓
@@ -188,7 +188,7 @@ const Testimonials = () => {
 
                 <h3
                   className={`text-xl font-bold mb-1 ${
-                    isDark ? "text-white" : "text-gray-800"
+                    isDark ? "text-purple-200" : "text-gray-800"
                   }`}
                 >
                   {testimonial.name}
@@ -196,7 +196,7 @@ const Testimonials = () => {
 
                 <p
                   className={`text-sm mb-2 ${
-                    isDark ? "text-blue-400" : "text-primary"
+                    isDark ? "text-purple-400" : "text-purple-600"
                   }`}
                 >
                   {testimonial.role}
@@ -217,7 +217,7 @@ const Testimonials = () => {
               <div className="mb-6">
                 <p
                   className={`text-sm leading-relaxed text-center ${
-                    isDark ? "text-gray-300" : "text-gray-600"
+                    isDark ? "text-purple-100" : "text-gray-600"
                   }`}
                 >
                   "{testimonial.quote}"
@@ -229,7 +229,7 @@ const Testimonials = () => {
                 <StarRating rating={testimonial.rating} />
                 <p
                   className={`text-xs mt-2 ${
-                    isDark ? "text-gray-400" : "text-gray-500"
+                    isDark ? "text-purple-200" : "text-gray-500"
                   }`}
                 >
                   {testimonial.rating}/5 Rating
@@ -249,25 +249,21 @@ const Testimonials = () => {
         >
           <h3
             className={`text-2xl md:text-3xl font-bold mb-6 ${
-              isDark ? "text-white" : "text-gray-800"
+              isDark ? "text-purple-200" : "text-gray-800"
             }`}
           >
             Ready to Join Our Success Stories?
           </h3>
           <p
             className={`text-lg mb-8 ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Start your investment journey today and become our next success
             story.
           </p>
           <button
-            className={`px-8 py-4 rounded-lg font-medium text-lg transition-all ${
-              isDark
-                ? "bg-blue-600 hover:bg-blue-700 text-white"
-                : "bg-blue-300 hover:bg-blue-600 text-white"
-            }`}
+            className="px-8 py-4 rounded-lg font-medium text-lg transition-all bg-purple-600 hover:bg-purple-700 text-white focus:ring-2 focus:ring-purple-500"
             onClick={() => navigate("/auth/register")}
           >
             Start Investing Now

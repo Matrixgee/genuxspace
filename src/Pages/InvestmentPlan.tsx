@@ -117,8 +117,8 @@ const InvestmentPlan = () => {
     <div
       className={`w-full py-20 px-4 md:px-8 lg:px-16 ${
         isDark
-          ? "bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
-          : "bg-gradient-to-br from-gray-100 via-blue-100 to-white"
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div className="container mx-auto">
@@ -133,26 +133,26 @@ const InvestmentPlan = () => {
           <span
             className={`inline-block py-3 px-6 rounded-full text-sm font-bold tracking-wider mb-6 ${
               isDark
-                ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                : "bg-gradient-to-r from-primary to-blue-900 text-black"
+                ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
+                : "bg-gradient-to-r from-purple-500 to-purple-600 text-white"
             }`}
           >
             OUR INVESTMENT PLANS
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className={isDark ? "text-white" : "text-gray-800"}>
+            <span className={isDark ? "text-purple-200" : "text-gray-800"}>
               The plans we offer are
             </span>
             <br />
-            <span className={isDark ? "text-blue-400" : "text-primary"}>
+            <span className="text-purple-500">
               specifically made for you
             </span>
           </h2>
 
           <p
             className={`text-lg md:text-xl max-w-3xl mx-auto ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Choose from our carefully crafted investment plans designed to
@@ -178,11 +178,11 @@ const InvestmentPlan = () => {
                 rotateY: 5,
                 transition: { duration: 0.2 },
               }}
-              className={`relative rounded-2xl p-6 ${
+              className={`relative rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 ${
                 isDark
-                  ? "bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700"
-                  : "bg-white border border-gray-200"
-              } shadow-xl hover:shadow-2xl transition-all duration-300`}
+                  ? "bg-gradient-to-br from-gray-700 to-gray-800 border border-purple-700"
+                  : "bg-gradient-to-br from-white to-purple-25 border border-purple-150"
+              }`}
             >
               {/* Popular Badge */}
               {plan.popular && (
@@ -203,7 +203,7 @@ const InvestmentPlan = () => {
 
                 <h3
                   className={`text-2xl md:text-3xl font-bold mb-2 ${
-                    isDark ? "text-white" : "text-gray-800"
+                    isDark ? "text-purple-200" : "text-gray-800"
                   }`}
                 >
                   {plan.plan}
@@ -220,19 +220,19 @@ const InvestmentPlan = () => {
               <div className="space-y-4 mb-8">
                 <div
                   className={`flex justify-between items-center py-3 px-4 rounded-lg ${
-                    isDark ? "bg-gray-700/50" : "bg-gray-50"
+                    isDark ? "bg-purple-800/30" : "bg-purple-50"
                   }`}
                 >
                   <span
                     className={`font-medium ${
-                      isDark ? "text-gray-300" : "text-gray-600"
+                      isDark ? "text-purple-200" : "text-gray-600"
                     }`}
                   >
                     Investment Range
                   </span>
                   <span
                     className={`font-bold ${
-                      isDark ? "text-white" : "text-gray-800"
+                      isDark ? "text-purple-100" : "text-gray-800"
                     }`}
                   >
                     {plan.investment}
@@ -241,12 +241,12 @@ const InvestmentPlan = () => {
 
                 <div
                   className={`flex justify-between items-center py-3 px-4 rounded-lg ${
-                    isDark ? "bg-gray-700/50" : "bg-gray-50"
+                    isDark ? "bg-purple-800/30" : "bg-purple-50"
                   }`}
                 >
                   <span
                     className={`font-medium ${
-                      isDark ? "text-gray-300" : "text-gray-600"
+                      isDark ? "text-purple-200" : "text-gray-600"
                     }`}
                   >
                     Capital Back
@@ -259,19 +259,19 @@ const InvestmentPlan = () => {
 
                 <div
                   className={`flex justify-between items-center py-3 px-4 rounded-lg ${
-                    isDark ? "bg-gray-700/50" : "bg-gray-50"
+                    isDark ? "bg-purple-800/30" : "bg-purple-50"
                   }`}
                 >
                   <span
                     className={`font-medium ${
-                      isDark ? "text-gray-300" : "text-gray-600"
+                      isDark ? "text-purple-200" : "text-gray-600"
                     }`}
                   >
                     Duration
                   </span>
                   <span
                     className={`font-bold ${
-                      isDark ? "text-white" : "text-gray-800"
+                      isDark ? "text-purple-100" : "text-gray-800"
                     }`}
                   >
                     30 Days
@@ -280,19 +280,19 @@ const InvestmentPlan = () => {
 
                 <div
                   className={`flex justify-between items-center py-3 px-4 rounded-lg ${
-                    isDark ? "bg-gray-700/50" : "bg-gray-50"
+                    isDark ? "bg-purple-800/30" : "bg-purple-50"
                   }`}
                 >
                   <span
                     className={`font-medium ${
-                      isDark ? "text-gray-300" : "text-gray-600"
+                      isDark ? "text-purple-200" : "text-gray-600"
                     }`}
                   >
                     Return Type
                   </span>
                   <span
                     className={`font-bold ${
-                      isDark ? "text-white" : "text-gray-800"
+                      isDark ? "text-purple-100" : "text-gray-800"
                     }`}
                   >
                     Daily
@@ -323,7 +323,7 @@ const InvestmentPlan = () => {
         >
           <p
             className={`text-lg mb-6 ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Need help choosing the right plan? Our experts are here to guide
