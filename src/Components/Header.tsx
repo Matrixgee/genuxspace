@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
-import logo from "../assets/newlog.png";
+import logo from "../assets/genuxLogo.png";
 import { useTheme } from "../Context/theme";
 
 const Header = () => {
@@ -49,7 +49,9 @@ const Header = () => {
           : isDark
           ? "bg-gray-800"
           : "bg-white"
-      } ${isDark ? "text-purple-100" : "text-gray-800"} fixed z-[99] transition-all duration-300`}
+      } ${
+        isDark ? "text-purple-100" : "text-gray-800"
+      } fixed z-[99] transition-all duration-300`}
       style={{
         width: "100%",
         height: "10vh",
@@ -214,11 +216,7 @@ const Header = () => {
         <div
           className={`border-t ${
             isDark ? "border-purple-700" : "border-purple-150"
-          } ${
-            isDark
-              ? "bg-gray-800"
-              : "bg-white"
-          } shadow-xl rounded-b-xl`}
+          } ${isDark ? "bg-gray-800" : "bg-white"} shadow-xl rounded-b-xl`}
           style={{
             width: "100%",
             paddingBottom: "16px",

@@ -27,7 +27,7 @@ const Review: React.FC = () => {
         </h2>
         <p className="mb-4 text-base">Your registration was successful!</p>
         <p className="mb-4 text-base">
-          We are excited to welcome you to the HexaGuard Crypto community.
+          We are excited to welcome you to the GenuxSpace Crypto community.
         </p>
         <p className="mb-4 text-base">
           You will be able to access your account soon once you are confirmed,
@@ -37,13 +37,13 @@ const Review: React.FC = () => {
           If you need any help, do not hesitate to reach out to us on the Live
           Chat Support System or email us at{" "}
           <a
-            href="mailto:HexaGuard@gmail.com"
+            href="mailto:GenuxSpace@gmail.com"
             className="text-blue-500 underline hover:text-blue-400"
           >
-            HexaGuard@gmail.com
+            GenuxSpace@gmail.com
           </a>
         </p>
-        <p className="font-semibold mb-4">Kind Regards, HexaGuard</p>
+        <p className="font-semibold mb-4">Kind Regards, GenuxSpace</p>
         <button
           onClick={handleBackToLogin}
           className="mt-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300"
@@ -51,7 +51,7 @@ const Review: React.FC = () => {
           Back to Login
         </button>
         <p className="mt-8 text-sm text-gray-400">
-          © 2024 HexaGuard. All rights reserved.
+          © 2024 GenuxSpace. All rights reserved.
         </p>
       </div>
     </div>

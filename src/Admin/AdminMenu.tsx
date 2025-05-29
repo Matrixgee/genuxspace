@@ -69,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
       <div className="sidebar_inner">
         <div className="logo">
           <img src={logo} alt="FinTrading Logo" />
-          <span className="text-slate-200">HexaGuard</span>
+          <span className="text-slate-200">GenuxSpace</span>
         </div>
         <div className="sidebar_items w-[90%]">
           <ul className="sidebar_items_inner text-slate-400">

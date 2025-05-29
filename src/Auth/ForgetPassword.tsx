@@ -93,7 +93,7 @@ const ForgetPassword = () => {
             </span>
           </p>
           <p className="text-slate-400 max-md:text-sm">
-            © Copyright 2024 HexaGuard. All Rights Reserved.
+            © Copyright 2024 GenuxSpace. All Rights Reserved.
           </p>
         </div>
       </div>

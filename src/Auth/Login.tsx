@@ -121,7 +121,7 @@ const Login = () => {
               isDark ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Welcome back to HexaGuard.com
+            Welcome back to GenuxSpace.com
           </p>
         </div>
 
@@ -238,7 +238,7 @@ const Login = () => {
               isDark ? "text-gray-400" : "text-gray-500"
             }`}
           >
-            Copyright 2023 HexaGuard. all rights reserved
+            Copyright 2023 GenuxSpace. all rights reserved
           </p>
         </div>
       </div>

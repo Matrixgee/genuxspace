@@ -134,7 +134,7 @@ const AllUsers: React.FC = () => {
   return (
     <div className="w-full h-full overflow-y-scroll max-md:scroll-hidden">
       <div className="w-1/3 h-20 mt-5 flex justify-start px-7 items-center max-md:w-[90%]">
-        <p className="text-2xl">HexaGuard users list</p>
+        <p className="text-2xl">GenuxSpace users list</p>
       </div>
       <div className="UserAction w-full h-20 flex justify-between items-center px-10">
         <button className="w-[12%] h-1/2 text-white rounded-md bg-green-400 max-md:w-[30%]">

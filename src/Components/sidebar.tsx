@@ -115,7 +115,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
                 </div>
               </div>
               <div className="logo-text">
-                <span className="brand-name">HexaGuard</span>
+                <span className="brand-name">GenuxSpace</span>
                 <span className="brand-subtitle">Trading Platform</span>
               </div>
             </div>

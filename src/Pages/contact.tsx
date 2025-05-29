@@ -9,7 +9,7 @@ const ContactUs = () => {
     {
       icon: "📧",
       title: "Email Us",
-      value: "support@hexaguardx.com",
+      value: "support@GenuxSpacex.com",
       description: "Get in touch for general inquiries",
     },
     {
@@ -117,9 +117,11 @@ const ContactUs = () => {
                 >
                   {info.value}
                 </p>
-                <p className={`text-sm ${
-                  isDark ? "text-purple-200" : "text-gray-500"
-                }`}>
+                <p
+                  className={`text-sm ${
+                    isDark ? "text-purple-200" : "text-gray-500"
+                  }`}
+                >
                   {info.description}
                 </p>
               </motion.div>

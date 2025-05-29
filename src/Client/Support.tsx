@@ -11,13 +11,13 @@ const Support = () => {
       <div className="relative  w-[70%] max-md:w-[90%] max-w-3xl bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl shadow-lg shadow-blue-500/10 p-8 max-md:p-6 text-gray-200 space-y-6">
         <div className="space-y-2 text-center">
           <h1 className="text-2xl font-bold text-white">
-            HexaGuard Trading Platform
+            GenuxSpace Trading Platform
           </h1>
           <p className="text-gray-400 text-sm max-md:text-xs">
             For inquiries, suggestions or complaints, reach out via email
           </p>
           <p className="text-blue-400 underline underline-offset-4 cursor-pointer hover:text-blue-300 transition text-base max-md:text-sm">
-            support@hexaguard.com
+            support@GenuxSpace.com
           </p>
         </div>
 
