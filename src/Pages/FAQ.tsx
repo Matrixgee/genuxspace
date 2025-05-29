@@ -102,8 +102,8 @@ const FAQSection = () => {
     <div
       className={`w-full py-20 px-4 md:px-8 lg:px-16 ${
         isDark
-          ? "bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900"
-          : "bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div className="container mx-auto max-w-4xl">
@@ -117,27 +117,27 @@ const FAQSection = () => {
         >
           <div
             className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${
-              isDark ? "bg-blue-900/50" : "bg-blue-100"
+              isDark ? "bg-purple-800/40" : "bg-purple-50"
             }`}
           >
             <FaQuestionCircle
-              className={`w-8 h-8 ${isDark ? "text-blue-400" : "text-primary"}`}
+              className={`w-8 h-8 ${isDark ? "text-purple-500" : "text-purple-500"}`}
             />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            <span className={isDark ? "text-white" : "text-gray-800"}>
+            <span className={isDark ? "text-purple-200" : "text-gray-800"}>
               Frequently Asked
             </span>
             <br />
-            <span className={isDark ? "text-blue-400" : "text-primary"}>
+            <span className="text-purple-500">
               Questions
             </span>
           </h2>
 
           <p
             className={`text-lg md:text-xl max-w-3xl mx-auto ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Find answers to common questions about our investment services and
@@ -160,8 +160,8 @@ const FAQSection = () => {
               variants={itemVariants}
               className={`rounded-xl border transition-all duration-300 ${
                 isDark
-                  ? "bg-gray-800/50 border-gray-700 hover:border-blue-500/50"
-                  : "bg-white border-gray-200 hover:border-blue-300"
+                  ? "bg-gradient-to-r from-gray-700 to-gray-800 border-purple-700 hover:border-purple-500/50"
+                  : "bg-gradient-to-r from-white to-purple-25 border-purple-150 hover:border-purple-300"
               } shadow-lg hover:shadow-xl`}
             >
               <button
@@ -171,7 +171,7 @@ const FAQSection = () => {
               >
                 <h3
                   className={`text-lg md:text-xl font-semibold pr-4 ${
-                    isDark ? "text-white" : "text-gray-800"
+                    isDark ? "text-purple-200" : "text-gray-800"
                   }`}
                 >
                   {faq.question}
@@ -181,12 +181,12 @@ const FAQSection = () => {
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                    isDark ? "bg-blue-900/50" : "bg-blue-100"
+                    isDark ? "bg-purple-800/40" : "bg-purple-50"
                   }`}
                 >
                   <FaChevronDown
                     className={`w-4 h-4 ${
-                      isDark ? "text-blue-400" : "text-primary"
+                      isDark ? "text-purple-500" : "text-purple-500"
                     }`}
                   />
                 </motion.div>
@@ -204,12 +204,12 @@ const FAQSection = () => {
                     <div className="px-6 pb-6">
                       <div
                         className={`w-full h-px mb-4 ${
-                          isDark ? "bg-gray-700" : "bg-gray-200"
+                          isDark ? "bg-purple-700" : "bg-purple-150"
                         }`}
                       ></div>
                       <p
                         className={`text-base leading-relaxed ${
-                          isDark ? "text-gray-300" : "text-gray-600"
+                          isDark ? "text-purple-100" : "text-gray-600"
                         }`}
                       >
                         {faq.answer}
@@ -230,20 +230,20 @@ const FAQSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className={`mt-16 text-center p-8 rounded-2xl ${
             isDark
-              ? "bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-gray-700"
-              : "bg-gradient-to-r from-blue-50 to-purple-50 border border-gray-200"
+              ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700"
+              : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
           }`}
         >
           <h3
             className={`text-2xl font-bold mb-4 ${
-              isDark ? "text-white" : "text-gray-800"
+              isDark ? "text-purple-200" : "text-gray-800"
             }`}
           >
             Still have questions?
           </h3>
           <p
             className={`text-lg mb-6 ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Our expert team is here to help you with any questions about your
@@ -256,8 +256,8 @@ const FAQSection = () => {
               onClick={handleContactSupport}
               className={`px-8 py-4 rounded-lg font-medium text-lg transition-all ${
                 isDark
-                  ? "bg-blue-600 hover:bg-blue-700 text-white"
-                  : "bg-blue-300 hover:bg-blue-600 text-white"
+                  ? "bg-purple-600 hover:bg-purple-700 text-white"
+                  : "bg-purple-500 hover:bg-purple-600 text-white"
               } shadow-lg hover:shadow-xl`}
             >
               Contact Support
@@ -268,8 +268,8 @@ const FAQSection = () => {
               onClick={handleScheduleCall}
               className={`inline-flex items-center px-8 py-4 rounded-lg font-medium text-lg transition-all border-2 ${
                 isDark
-                  ? "border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
-                  : "border-primary text-primary hover:bg-primary hover:text-white"
+                  ? "border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white"
+                  : "border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white"
               } shadow-lg hover:shadow-xl`}
             >
               <FaPhone className="w-4 h-4 mr-2" />
