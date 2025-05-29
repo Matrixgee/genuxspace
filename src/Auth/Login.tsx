@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import axios from "../config/axiosconig";
 import { Userdata, userToken } from "../Function/Slice";
 import { isAxiosError } from "axios";
-import logo from "../assets/newlog.png";
+import logo from "../assets/genuxMain.png";
 
 const Login = () => {
   const { theme } = useTheme();
@@ -90,18 +90,22 @@ const Login = () => {
   return (
     <div
       className={`min-h-screen transition-colors duration-300 flex items-center justify-center py-12 px-4 ${
-        isDark ? "bg-gray-900" : "bg-gray-50"
+        isDark 
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800" 
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div
-        className={`max-w-md w-full space-y-8 p-10 rounded-xl shadow-2xl transition-colors duration-300 ${
-          isDark ? "bg-gray-800" : "bg-white"
+        className={`max-w-md w-full space-y-8 p-10 max-md:p-4 rounded-xl shadow-2xl transition-colors duration-300 ${
+          isDark 
+            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700" 
+            : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
         }`}
       >
         <div className="flex flex-col items-center">
           <div
             className={`h-20 w-20 rounded-full flex items-center justify-center mb-4 ${
-              isDark ? "bg-white" : "bg-blue-500"
+              isDark ? "bg-purple-800/40" : "bg-purple-50"
             }`}
             onClick={() => navigate("/")}
           >
@@ -111,14 +115,14 @@ const Login = () => {
           </div>
           <h2
             className={`mt-6 text-center text-3xl font-extrabold transition-colors duration-300 ${
-              isDark ? "text-white" : "text-gray-900"
+              isDark ? "text-purple-200" : "text-gray-800"
             }`}
           >
             Login your account
           </h2>
           <p
             className={`mt-2 text-center text-sm transition-colors duration-300 ${
-              isDark ? "text-gray-300" : "text-gray-600"
+              isDark ? "text-purple-100" : "text-gray-600"
             }`}
           >
             Welcome back to GenuxSpace.com
@@ -131,7 +135,7 @@ const Login = () => {
               <label
                 htmlFor="email"
                 className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
-                  isDark ? "text-gray-300" : "text-gray-700"
+                  isDark ? "text-purple-200" : "text-gray-500"
                 }`}
               >
                 Email
@@ -141,10 +145,10 @@ const Login = () => {
                 name="email"
                 id="email"
                 placeholder="Enter your email"
-                className={`w-full px-3 py-3 border rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`w-full px-3 py-3 border rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 ${
                   isDark
-                    ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                    : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                    ? "bg-gray-700 border-purple-600 text-purple-100 placeholder-purple-300"
+                    : "bg-white border-purple-200 text-gray-800 placeholder-gray-500"
                 }`}
                 value={formData.email}
                 onChange={handleChange}
@@ -158,7 +162,7 @@ const Login = () => {
               <label
                 htmlFor="password"
                 className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
-                  isDark ? "text-gray-300" : "text-gray-700"
+                  isDark ? "text-purple-200" : "text-gray-500"
                 }`}
               >
                 Password
@@ -169,10 +173,10 @@ const Login = () => {
                   name="password"
                   id="password"
                   placeholder="Enter Password"
-                  className={`w-full px-3 py-3 pr-10 border rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-3 pr-10 border rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 ${
                     isDark
-                      ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400"
-                      : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
+                      ? "bg-gray-700 border-purple-600 text-purple-100 placeholder-purple-300"
+                      : "bg-white border-purple-200 text-gray-800 placeholder-gray-500"
                   }`}
                   value={formData.password}
                   onChange={handleChange}
@@ -180,7 +184,7 @@ const Login = () => {
                 <button
                   type="button"
                   className={`absolute inset-y-0 right-0 pr-3 flex items-center ${
-                    isDark ? "text-gray-400" : "text-gray-600"
+                    isDark ? "text-purple-200" : "text-gray-500"
                   }`}
                   onClick={() => setShowPassword(!showPassword)}
                 >
@@ -193,29 +197,27 @@ const Login = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex max-md:flex-col max-md:items-start items-center justify-between">
             <div className="text-sm">
               <p
                 className={`text-sm ${
-                  isDark ? "text-gray-400" : "text-gray-600"
+                  isDark ? "text-purple-200" : "text-gray-500"
                 }`}
               >
-                Already have an account?{" "}
+                Don't have an account?{" "}
                 <Link
                   to="/auth/register"
-                  className={`font-medium ${
-                    isDark ? "text-blue-400" : "text-blue-500"
-                  } hover:underline`}
+                  className="font-medium text-purple-500 hover:underline"
                 >
                   Register
                 </Link>
               </p>
             </div>
             <div
-              className="text-sm  px-9 flex justify-end items-center"
+              className="text-sm px-3 max-md:px-0 flex justify-end items-center"
               onClick={() => navigate("/auth/forget")}
             >
-              <span className="text-blue-500 font-semibold cursor-pointer hover:underline">
+              <span className="text-purple-500 font-semibold cursor-pointer hover:underline">
                 Forget Password?
               </span>
             </div>
@@ -225,7 +227,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Logging in..." : "Log in"}
             </button>
@@ -235,7 +237,7 @@ const Login = () => {
         <div className="text-center">
           <p
             className={`text-sm transition-colors duration-300 ${
-              isDark ? "text-gray-400" : "text-gray-500"
+              isDark ? "text-purple-200" : "text-gray-500"
             }`}
           >
             Copyright 2023 GenuxSpace. all rights reserved

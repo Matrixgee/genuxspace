@@ -50,7 +50,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
           <div
             className={`relative rounded-xl px-12 py-3 shadow-2xl border max-w-sm ${
               isDark
-                ? "bg-gradient-to-r from-gray-800 to-gray-900 border-gray-600 text-white"
+                ? "bg-gradient-to-r from-purple-900 to-purple-700 border-purple-400 text-white"
                 : "bg-gradient-to-r from-white to-gray-50 border-gray-200 text-gray-800"
             }`}
           >
@@ -60,7 +60,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
                 onClick={onClose}
                 className={`absolute top-2 right-2 w-6 h-6 rounded-full flex items-center justify-center transition-colors ${
                   isDark
-                    ? "hover:bg-gray-700 text-gray-400 hover:text-white"
+                    ? "hover:bg-purple-500/30 text-white hover:text-white"
                     : "hover:bg-gray-100 text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -70,57 +70,33 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
 
             {/* Notification content */}
             <div className="flex items-start space-x-3">
-              {/* Avatar/Icon */}
               <div
                 className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
-                  isDark ? "bg-green-900/50" : "bg-green-100"
+                  isDark ? "bg-purple-800/60" : "bg-green-100"
                 }`}
               >
                 <FaUser
                   className={`w-4 h-4 ${
-                    isDark ? "text-green-400" : "text-green-600"
+                    isDark ? "text-green-300" : "text-green-600"
                   }`}
                 />
               </div>
 
-              {/* Content */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center space-x-2 mb-1">
-                  <h4
-                    className={`font-semibold text-sm ${
-                      isDark ? "text-white" : "text-gray-800"
-                    }`}
-                  >
-                    {name}
-                  </h4>
+                  <h4 className="font-semibold text-sm">{name}</h4>
                   <span className="text-xs px-2 py-0.5 rounded-full bg-green-500 text-white">
                     NEW
                   </span>
                 </div>
 
                 <div className="flex items-center space-x-1 mb-2">
-                  <FaMapMarkerAlt
-                    className={`w-3 h-3 ${
-                      isDark ? "text-gray-400" : "text-gray-500"
-                    }`}
-                  />
-                  <span
-                    className={`text-xs ${
-                      isDark ? "text-gray-400" : "text-gray-600"
-                    }`}
-                  >
-                    {city}
-                  </span>
+                  <FaMapMarkerAlt className="w-3 h-3 opacity-70" />
+                  <span className="text-xs opacity-80">{city}</span>
                 </div>
 
                 <div className="flex items-center space-x-2">
-                  <span
-                    className={`text-xs ${
-                      isDark ? "text-gray-300" : "text-gray-600"
-                    }`}
-                  >
-                    Just earned
-                  </span>
+                  <span className="text-xs opacity-80">Just earned</span>
                   <div className="flex items-center space-x-1">
                     <FaDollarSign className="w-3 h-3 text-green-500" />
                     <span className="font-bold text-green-500 text-sm">
@@ -135,7 +111,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
             {/* Progress bar */}
             <motion.div
               className={`absolute bottom-0 left-0 h-1 rounded-b-xl ${
-                isDark ? "bg-blue-600" : "bg-primary"
+                isDark ? "bg-purple-400" : "bg-green-500"
               }`}
               initial={{ width: "100%" }}
               animate={{ width: "0%" }}
@@ -145,7 +121,7 @@ const NotificationModal: React.FC<NotificationModalProps> = ({
             {/* Glow effect */}
             <div
               className={`absolute inset-0 rounded-xl opacity-20 ${
-                isDark ? "bg-blue-500" : "bg-primary"
+                isDark ? "bg-purple-500" : "bg-green-300"
               } blur-xl -z-10`}
             />
           </div>

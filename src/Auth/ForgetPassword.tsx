@@ -38,34 +38,51 @@ const ForgetPassword = () => {
 
   return (
     <div
-      className={`w-full h-[100vh] flex justify-center items-center transition-all duration-300 ${
-        isDark ? "bg-gray-900 text-white" : "bg-[#F8F9F9] text-gray-800"
+      className={`w-full h-screen flex justify-center items-center transition-all duration-300 ${
+        isDark
+          ? "bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800"
+          : "bg-gradient-to-br from-purple-50 via-purple-75 to-purple-100"
       }`}
     >
       <div
-        className={`w-[30%] max-md:w-[90%] h-[60%] max-md:h-[50%] rounded-md flex justify-around items-center flex-col shadow-lg transition-all duration-300 ${
-          isDark ? "bg-gray-800 border border-gray-700" : "bg-white"
+        className={`w-[30%] max-md:w-[90%] h-[60%] max-md:h-[55%] rounded-md flex flex-col justify-around items-center shadow-lg transition-all duration-300 ${
+          isDark
+            ? "bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700"
+            : "bg-gradient-to-r from-white to-purple-25 border border-purple-150"
         }`}
       >
+        {/* Heading */}
         <div className="w-full h-[20%] flex justify-center items-center">
-          <p className="font-bold text-3xl text-blue-600">Password Reset</p>
+          <h2
+            className={`text-center text-3xl font-extrabold transition-colors duration-300 ${
+              isDark ? "text-purple-200" : "text-gray-800"
+            }`}
+          >
+            Password Reset
+          </h2>
         </div>
-        <div className="w-full h-[50%] flex justify-around items-center">
+
+        {/* Form */}
+        <div className="w-full h-[50%] flex justify-center items-center">
           <form
-            className="w-full h-full flex justify-center flex-col items-center"
+            className="w-full h-full flex flex-col justify-center items-center"
             onSubmit={forgetPassword}
           >
-            <div className="w-[90%] h-[60%] gap-2 px-1 flex justify-center items-start flex-col">
-              <label className="font-bold text-blue-500">
+            <div className="w-[90%] h-[60%] gap-2 px-1 flex flex-col justify-start items-start">
+              <label
+                className={`font-semibold transition-colors ${
+                  isDark ? "text-purple-200" : "text-gray-500"
+                }`}
+              >
                 Your Email <span className="text-red-600">*</span>
               </label>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className={`py-3 outline-none border-2 px-4 w-full rounded-md ${
+                className={`py-3 px-4 w-full rounded-md outline-none border transition-all duration-300 focus:ring-2 focus:ring-purple-500 ${
                   isDark
-                    ? "bg-gray-700 text-white border-gray-600 placeholder-gray-400"
-                    : "bg-white text-black border-gray-300 placeholder-gray-500"
+                    ? "bg-gray-700 text-purple-100 border-purple-600 placeholder-purple-300"
+                    : "bg-white text-gray-800 border-purple-200 placeholder-gray-500"
                 }`}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -75,24 +92,34 @@ const ForgetPassword = () => {
             <div className="w-full h-[40%] flex justify-center items-center mt-4">
               <button
                 type="submit"
-                className="py-3 transition-all duration-300 hover:bg-blue-500 text-white font-semibold px-6 rounded-md bg-blue-700"
+                className="py-3 px-6 font-semibold text-white rounded-md bg-purple-600 hover:bg-purple-700 transition-colors duration-300"
               >
                 Email Password Reset Link
               </button>
             </div>
           </form>
         </div>
+
+        {/* Footer */}
         <div className="w-full h-[25%] flex flex-col items-center justify-around px-6 text-center">
-          <p>
+          <p
+            className={`transition-colors ${
+              isDark ? "text-purple-200" : "text-gray-600"
+            }`}
+          >
             Repeat Login?{" "}
             <span
-              className="text-slate-600 dark:text-slate-300 font-bold cursor-pointer"
+              className="text-purple-500 hover:underline font-bold cursor-pointer"
               onClick={() => navigate("/auth/login")}
             >
               Login
             </span>
           </p>
-          <p className="text-slate-400 max-md:text-sm">
+          <p
+            className={`text-sm ${
+              isDark ? "text-purple-200" : "text-gray-500"
+            }`}
+          >
             © Copyright 2024 GenuxSpace. All Rights Reserved.
           </p>
         </div>
