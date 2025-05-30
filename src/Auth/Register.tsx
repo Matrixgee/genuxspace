@@ -78,7 +78,7 @@ const SignUp = () => {
       });
       setTermsAccepted(false);
       navigate("/review");
-    } catch (error: any) {
+    } catch (error) {
       if (isAxiosError(error)) {
         const errorMsg = error.response?.data?.message || "An error occurred";
         toast.error(errorMsg);
