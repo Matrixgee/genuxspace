@@ -20,7 +20,7 @@ const ResetPassword = () => {
       return;
     }
 
-    const url = `https://gen-75n5.onrender.com/apiuser/Reset/${userToken}`;
+    const url = `https://gen-75n5.onrender.com/api/user/Reset/${userToken}`;
     const data = { password, confirmPassword };
     const toastloading = toast.loading("Please wait...");
 

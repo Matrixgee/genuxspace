@@ -16,10 +16,10 @@ const Security = () => {
     return (
         <>
             <div className="w-full h-max pt-5 flex flex-col gap-2">
-                <p className="text-xl text-[rgb(54,74,99)] font-semibold">
+                <p className="text-xl text-[rgb(132,107,197)] font-semibold">
                     Security Settings
                 </p>
-                <p className="text-sm text-[rgb(82,100,132)] font-medium">
+                <p className="text-sm text-[rgb(121,98,179)] font-medium">
                     These settings are helps you keep your account secure.
                 </p>
                 <div className="w-full h-max border mt-5 border-gray-300 rounded bg-white">
@@ -31,7 +31,7 @@ const Security = () => {
                             </span>
                         </p>
                         <button
-                            className="w-max h-max px-5 py-2 bg-[#023e8a] text-white rounded text-sm font-semibold"
+                            className="w-max h-max px-5 py-2  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 text-white rounded text-sm font-semibold"
                             onClick={handleToggleModal}
                         >
                             Change Password
@@ -88,7 +88,7 @@ const Security = () => {
                         />
                     </div>
                     <button
-                        className="w-max h-max px-5 py-2 bg-[#023e8a] text-white rounded text-sm font-semibold"
+                        className="w-max h-max px-5 py-2 bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 text-white rounded text-sm font-semibold transition-colors duration-200"
                     >
                         UPDATE PASSWORD
                     </button>

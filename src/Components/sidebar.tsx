@@ -84,14 +84,14 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
 
       <aside className={`sidebar ${active ? "active" : ""}`}>
         {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/30 to-slate-900/95 backdrop-blur-xl"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800/95 via-purple-900/40 to-gray-900/95 backdrop-blur-xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-purple-700/10"></div>
 
         {/* Animated particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-4 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-4 w-16 h-16 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-indigo-500/5 rounded-full blur-xl animate-pulse delay-500"></div>
+          <div className="absolute top-10 left-4 w-20 h-20 bg-purple-500/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-4 w-16 h-16 bg-purple-600/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-400/5 rounded-full blur-xl animate-pulse delay-500"></div>
         </div>
 
         {/* Close button */}
@@ -104,7 +104,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           <div className="logo-section">
             <div className="logo-container">
               <div className="logo-icon">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg">
                     <img
                       src={logo}
@@ -149,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           <div className="sidebar-footer">
             <div className="user-info">
               <div className="user-avatar">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm font-medium">U</span>
                 </div>
               </div>
@@ -173,7 +173,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           top: 0;
           z-index: 30;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 1px solid rgba(147, 51, 234, 0.2);
         }
 
         @media (min-width: 768px) {
@@ -240,14 +240,14 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         }
 
         .brand-name {
-          color: white;
+          color: rgb(221, 214, 254);
           font-size: 1.25rem;
           font-weight: 700;
           line-height: 1.2;
         }
 
         .brand-subtitle {
-          color: rgb(148, 163, 184);
+          color: rgb(196, 181, 253);
           font-size: 0.75rem;
           font-weight: 500;
         }
@@ -257,7 +257,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           background: linear-gradient(
             to right,
             transparent,
-            rgba(255, 255, 255, 0.2),
+            rgba(147, 51, 234, 0.3),
             transparent
           );
           margin-top: 1rem;
@@ -284,17 +284,17 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         }
 
         .nav-item:hover {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(147, 51, 234, 0.1);
           transform: translateX(4px);
         }
 
         .nav-item.active {
           background: linear-gradient(
             135deg,
-            rgba(59, 130, 246, 0.2),
-            rgba(147, 51, 234, 0.2)
+            rgba(147, 51, 234, 0.2),
+            rgba(126, 34, 206, 0.2)
           );
-          border: 1px solid rgba(59, 130, 246, 0.3);
+          border: 1px solid rgba(147, 51, 234, 0.3);
         }
 
         .nav-content {
@@ -307,18 +307,18 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         }
 
         .nav-icon {
-          color: rgb(148, 163, 184);
+          color: rgb(196, 181, 253);
           transition: color 0.2s ease;
           flex-shrink: 0;
         }
 
         .nav-item:hover .nav-icon,
         .nav-item.active .nav-icon {
-          color: rgb(59, 130, 246);
+          color: rgb(147, 51, 234);
         }
 
         .nav-text {
-          color: rgb(203, 213, 225);
+          color: rgb(221, 214, 254);
           font-size: 0.95rem;
           font-weight: 500;
           transition: color 0.2s ease;
@@ -338,8 +338,8 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           height: 60%;
           background: linear-gradient(
             to bottom,
-            rgb(59, 130, 246),
-            rgb(147, 51, 234)
+            rgb(147, 51, 234),
+            rgb(126, 34, 206)
           );
           border-radius: 2px 0 0 2px;
           animation: slideIn 0.3s ease;
@@ -348,7 +348,7 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         .sidebar-footer {
           margin-top: auto;
           padding-top: 1.5rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          border-top: 1px solid rgba(147, 51, 234, 0.2);
         }
 
         .user-info {
@@ -356,9 +356,9 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
           align-items: center;
           gap: 0.75rem;
           padding: 1rem;
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(147, 51, 234, 0.1);
           border-radius: 1rem;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(147, 51, 234, 0.2);
           backdrop-filter: blur(8px);
         }
 
@@ -368,13 +368,13 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         }
 
         .user-name {
-          color: white;
+          color: rgb(221, 214, 254);
           font-size: 0.875rem;
           font-weight: 600;
         }
 
         .user-status {
-          color: rgb(34, 197, 94);
+          color: rgb(168, 85, 247);
           font-size: 0.75rem;
           font-weight: 500;
         }
@@ -398,12 +398,12 @@ const Sidebar: React.FC<SidebarProps> = ({ active, setActive }) => {
         }
 
         .navigation::-webkit-scrollbar-thumb {
-          background: rgba(255, 255, 255, 0.2);
+          background: rgba(147, 51, 234, 0.3);
           border-radius: 2px;
         }
 
         .navigation::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 255, 255, 0.3);
+          background: rgba(147, 51, 234, 0.5);
         }
       `}</style>
     </div>

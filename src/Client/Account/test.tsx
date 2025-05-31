@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Test = () => {
   const userToken = useSelector((state: any) => state.user.token);
 
-  const apiUrl = "https://gen-75n5.onrender.com/apiuser/getPostByName";
+  const apiUrl = "https://gen-75n5.onrender.com/api/user/getPostByName";
 
   useEffect(() => {
     const fetchadd = async () => {

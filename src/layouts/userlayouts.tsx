@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="h-screen w-screen max-w-[100vw] max-h-[100vh] overflow-hidden flex">
       <Sidebar active={active} setActive={setActive} />
-      <div className=" w-full h-full bg-[#101829]">
+      <div className=" w-full h-full bg-[#291027]">
         <UserHeader active={active} setActive={setActive} />
         <Outlet />
       </div>

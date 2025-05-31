@@ -10,7 +10,7 @@ const AllKyc = () => {
   const fetchKyc = async () => {
     try {
       const res = await axios.get(
-        "https://gen-75n5.onrender.com/apiadmin/getAllKyc",
+        "https://gen-75n5.onrender.com/api/admin/getAllKyc",
         {
           headers: { Authorization: `Bearer ${userToken}` },
         }
@@ -28,7 +28,7 @@ const AllKyc = () => {
     const toastId = toast.loading("Updating...");
     try {
       const res = await axios.put(
-        `https://gen-75n5.onrender.com/apiadmin/updateKycStatus/${_id}`,
+        `https://gen-75n5.onrender.com/api/admin/updateKycStatus/${_id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${userToken}` },

@@ -12,7 +12,7 @@ const ForgetPassword = () => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
-  const url = "https://gen-75n5.onrender.com/apiuser/forgotPass";
+  const url = "https://gen-75n5.onrender.com/api/user/forgotPass";
   const headers = {
     Authorization: `Bearer ${userToken}`,
   };
