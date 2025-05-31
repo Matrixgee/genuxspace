@@ -32,7 +32,8 @@ const UserHeader: React.FC<UserHeaderProps> = ({ active, setActive }) => {
   const navigate = useNavigate();
 
   // Mock user data - replace with your actual user selector
-  const user = useSelector((state: any) => state.user.user.user);
+  // const user = useSelector((state: any) => state.user.user.user);
+  const user = useSelector((state: any) => state.user.user);
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
@@ -107,7 +108,7 @@ const UserHeader: React.FC<UserHeaderProps> = ({ active, setActive }) => {
     <div className="header-container">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-purple-900/20 to-slate-900/95 backdrop-blur-xl"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/10 to-purple-700/10"></div>
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -164,7 +165,7 @@ const UserHeader: React.FC<UserHeaderProps> = ({ active, setActive }) => {
                 {userImage ? (
                   <img src={userImage} alt="User" className="avatar-image" />
                 ) : (
-                  <div className="avatar-placeholder">
+                  <div className="p-2 rounded-[50%] bg-purple-800/40 hover:bg-purple-700/50 text-purple-200 hover:text-white transition-all duration-200 border border-purple-600/30 hover:border-purple-500/50 shadow-lg hover:shadow-purple-500/20">
                     <User className="w-5 h-5" />
                   </div>
                 )}
@@ -253,4 +254,4 @@ const UserHeader: React.FC<UserHeaderProps> = ({ active, setActive }) => {
   );
 };
 
-export default UserHeader;
+export default UserHeader

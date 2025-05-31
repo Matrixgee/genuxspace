@@ -127,14 +127,14 @@ const Updatekyc = () => {
   };
 
   return (
-    <div className="h-[100%] w-full overflow-y-scroll  bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 flex justify-center py-12 px-4">
-      <div className="w-full max-w-4xl h-[65rem] max-md:h-[93rem] bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-8">
+    <div className="h-[100%] w-full overflow-y-scroll bg-gradient-to-br from-gray-800 via-gray-900 to-purple-800 flex justify-center py-12 px-4">
+      <div className="w-full max-w-4xl h-[65rem] max-md:h-[93rem] bg-gradient-to-r from-gray-700 to-gray-800 border border-purple-700 backdrop-blur-lg rounded-3xl shadow-2xl p-8">
         {/* Header */}
         <div className="text-center mb-6">
-          <h1 className="text-4xl font-bold text-white mb-2">
+          <h1 className="text-4xl font-bold text-purple-200 mb-2">
             Update KYC Information
           </h1>
-          <p className="text-blue-100 text-lg">
+          <p className="text-purple-100 text-lg">
             Please update your Know Your Customer details
           </p>
         </div>
@@ -144,7 +144,7 @@ const Updatekyc = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Full Name */}
             <div className="space-y-2">
-              <label className="block text-white font-semibold text-sm">
+              <label className="block text-purple-200 font-semibold text-sm">
                 Full Name *
               </label>
               <input
@@ -152,7 +152,7 @@ const Updatekyc = () => {
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                 placeholder="Enter your full name"
               />
               {errors.fullName && (
@@ -162,18 +162,18 @@ const Updatekyc = () => {
 
             {/* Country */}
             <div className="space-y-2">
-              <label className="block text-white font-semibold text-sm">
+              <label className="block text-purple-200 font-semibold text-sm">
                 Country *
               </label>
               <select
                 name="country"
                 value={formData.country}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
               >
-                <option value="">Select your country</option>
+                <option value="" className="text-gray-800">Select your country</option>
                 {loadingCountries ? (
-                  <option disabled>Loading countries...</option>
+                  <option disabled className="text-gray-800">Loading countries...</option>
                 ) : (
                   countries.map((country) => (
                     <option
@@ -189,15 +189,11 @@ const Updatekyc = () => {
               {errors.country && (
                 <p className="text-red-300 text-sm">{errors.country}</p>
               )}
-
-              {errors.country && (
-                <p className="text-red-300 text-sm">{errors.country}</p>
-              )}
             </div>
 
             {/* Date of Birth */}
             <div className="space-y-2">
-              <label className="block text-white font-semibold text-sm">
+              <label className="block text-purple-200 font-semibold text-sm">
                 Date of Birth
               </label>
               <input
@@ -205,13 +201,13 @@ const Updatekyc = () => {
                 name="dateOfBirth"
                 value={formData.dateOfBirth}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
             {/* PayPal Email */}
             <div className="space-y-2">
-              <label className="block text-white font-semibold text-sm">
+              <label className="block text-purple-200 font-semibold text-sm">
                 PayPal Email
               </label>
               <input
@@ -219,7 +215,7 @@ const Updatekyc = () => {
                 name="ppEmail"
                 value={formData.ppEmail}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                 placeholder="Enter PayPal email"
               />
               {errors.ppEmail && (
@@ -230,7 +226,7 @@ const Updatekyc = () => {
 
           {/* Mailing Address */}
           <div className="space-y-2">
-            <label className="block text-white font-semibold text-sm">
+            <label className="block text-purple-200 font-semibold text-sm">
               Mailing Address
             </label>
             <textarea
@@ -238,21 +234,21 @@ const Updatekyc = () => {
               value={formData.mAddress}
               onChange={handleInputChange}
               rows={3}
-              className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300 resize-none"
+              className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500 resize-none"
               placeholder="Enter your mailing address"
             />
           </div>
 
           {/* Banking Information */}
-          <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-gray-800/40 border border-purple-600 rounded-2xl p-6">
+            <h3 className="text-2xl font-bold text-purple-200 mb-4">
               Banking Information
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Bank Name */}
               <div className="space-y-2">
-                <label className="block text-white font-semibold text-sm">
+                <label className="block text-purple-200 font-semibold text-sm">
                   Bank Name *
                 </label>
                 <input
@@ -260,7 +256,7 @@ const Updatekyc = () => {
                   name="bankName"
                   value={formData.bankName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                   placeholder="Enter bank name"
                 />
                 {errors.bankName && (
@@ -270,14 +266,14 @@ const Updatekyc = () => {
 
               {/* Account Type */}
               <div className="space-y-2">
-                <label className="block text-white font-semibold text-sm">
+                <label className="block text-purple-200 font-semibold text-sm">
                   Account Type
                 </label>
                 <select
                   name="accountType"
                   value={formData.accountType}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                 >
                   <option value="" className="text-gray-800">
                     Select account type
@@ -293,7 +289,7 @@ const Updatekyc = () => {
 
               {/* Account Number */}
               <div className="space-y-2">
-                <label className="block text-white font-semibold text-sm">
+                <label className="block text-purple-200 font-semibold text-sm">
                   Account Number
                 </label>
                 <input
@@ -301,14 +297,14 @@ const Updatekyc = () => {
                   name="accountNumber"
                   value={formData.accountNumber}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                   placeholder="Enter account number"
                 />
               </div>
 
               {/* Routing Number */}
               <div className="space-y-2">
-                <label className="block text-white font-semibold text-sm">
+                <label className="block text-purple-200 font-semibold text-sm">
                   Routing Number
                 </label>
                 <input
@@ -316,7 +312,7 @@ const Updatekyc = () => {
                   name="routingNumber"
                   value={formData.routingNumber}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="w-full px-4 py-3 bg-gray-800/60 border border-purple-600 rounded-xl text-purple-100 placeholder-purple-300 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500"
                   placeholder="Enter routing number"
                 />
               </div>
@@ -330,7 +326,7 @@ const Updatekyc = () => {
             type="submit"
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="w-full px-12 py-4 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full px-12 py-4 bg-purple-600 hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none focus:outline-none"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center">
@@ -364,7 +360,7 @@ const Updatekyc = () => {
 
         {/* Footer */}
         <div className="text-center mt-4">
-          <p className="text-blue-100 text-sm">
+          <p className="text-purple-100 text-sm">
             All information is encrypted and securely stored. Fields marked with
             * are required.
           </p>

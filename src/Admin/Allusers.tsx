@@ -31,7 +31,7 @@ const AllUsers: React.FC = () => {
   const users = useSelector((state: any) => state.user.allAdminUsers);
   const token = useSelector((state: any) => state.user.userToken);
 
-  const url = "https://gen-75n5.onrender.com/apiadmin/getAllUser";
+  const url = "https://gen-75n5.onrender.com/api/admin/getAllUser";
 
   const fetchUsers = async () => {
     try {
