@@ -3,7 +3,9 @@ import { useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 const Profile = () => {
+
   const user = useSelector((state: any) => state.user.user);
+
 
   const [edit, setEdit] = useState<boolean>(false);
   const [change, setChange] = useState<boolean>(false);

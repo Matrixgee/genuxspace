@@ -31,7 +31,10 @@ const UserDetails = () => {
   const { _id } = useParams<{ _id: string }>();
 
   const verifyUser = async () => {
+
     const verifyUrl = `https://gen-75n5.onrender.com/api/admin/verifyUser/${_id}`;
+
+
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };

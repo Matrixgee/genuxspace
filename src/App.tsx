@@ -6,7 +6,9 @@ import { MainRoutes } from "./Routes/MainRoutes";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+
   const baseUrl = "https://gen-75n5.onrender.com/api";
+
 
   useEffect(() => {
     const wakeUpServer = async () => {

@@ -11,6 +11,7 @@ const Security = () => {
     setModal(!modal);
   };
 
+
   return (
     <>
       <div className="w-full h-max pt-5 flex flex-col gap-2">
@@ -86,6 +87,7 @@ const Security = () => {
       </Modal>
     </>
   );
+
 };
 
 export default Security;
