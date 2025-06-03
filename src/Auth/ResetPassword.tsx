@@ -20,7 +20,7 @@ const ResetPassword = () => {
       return;
     }
 
-    const url = `https://gen-75n5.onrender.com/apiuser/Reset/${userToken}`;
+    const url = `https://gen-75n5.onrender.com/api/user/Reset/${userToken}`;
     const data = { password, confirmPassword };
     const toastloading = toast.loading("Please wait...");
 
@@ -147,7 +147,7 @@ const ResetPassword = () => {
               isDark ? "text-purple-200" : "text-gray-500"
             }`}
           >
-            © Copyright 2024 GenuxSpace. All Rights Reserved.
+            © Copyright 2025 GenuxSpace. All Rights Reserved.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 const Support = () => {
   return (
-    <div className="relative w-full h-full overflow-y-auto bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 flex items-center justify-center px-4">
+    <div className="relative w-full h-full overflow-y-auto bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 flex items-center justify-center px-4">
       {/* Background Visuals */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
@@ -29,7 +29,7 @@ const Support = () => {
             className="w-full h-40 bg-white/10 text-white p-3 rounded-lg border border-white/20 outline-none focus:ring-2 focus:ring-blue-400 resize-none"
             placeholder="Type your message here..."
           ></textarea>
-          <button className="w-full h-12 bg-blue-600 hover:bg-blue-500 transition text-white font-semibold rounded-lg">
+          <button className="w-full h-12 bg-purple-600 hover:bg-purple-500 transition text-white font-semibold rounded-lg">
             Send
           </button>
         </div>

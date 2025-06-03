@@ -21,7 +21,7 @@ const Overview = () => {
   const GetUser = async () => {
     try {
       const response = await axios.get(
-        `https://gen-75n5.onrender.com/apiuser/userprofile/${id}`,
+        `https://gen-75n5.onrender.com/api/user/userprofile/${id}`,
         {
           headers: { Authorization: `Bearer ${UserToken}` },
         }

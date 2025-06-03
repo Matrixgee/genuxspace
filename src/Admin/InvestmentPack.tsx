@@ -40,7 +40,7 @@ const InvestmentPack: React.FC = () => {
   const getAllPlans = async () => {
     try {
       const response = await axios.get(
-        "https://gen-75n5.onrender.com/apiadmin/getAllPlans",
+        "https://gen-75n5.onrender.com/api/admin/getAllPlans",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -87,7 +87,7 @@ const InvestmentPack: React.FC = () => {
       const values = form.getFieldsValue();
       if (isEditing && editingPlanId) {
         await axios.put(
-          `https://gen-75n5.onrender.com/apiadmin/editPlan/${editingPlanId}`,
+          `https://gen-75n5.onrender.com/api/admin/editPlan/${editingPlanId}`,
           values,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -95,7 +95,7 @@ const InvestmentPack: React.FC = () => {
         );
       } else {
         await axios.post(
-          "https://gen-75n5.onrender.com/apiadmin/postPlan",
+          "https://gen-75n5.onrender.com/api/admin/postPlan",
           values,
           {
             headers: { Authorization: `Bearer ${token}` },
@@ -123,7 +123,7 @@ const InvestmentPack: React.FC = () => {
     try {
       if (deletingPlanId) {
         await axios.delete(
-          `https://gen-75n5.onrender.com/apiadmin/deletePlan/${deletingPlanId}`,
+          `https://gen-75n5.onrender.com/api/admin/deletePlan/${deletingPlanId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

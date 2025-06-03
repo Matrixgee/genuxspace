@@ -19,7 +19,7 @@ const Packages = () => {
     const getAllPlans = async () => {
       try {
         const response = await axios.get(
-          "https://gen-75n5.onrender.com/apiuser/getAllPlans"
+          "https://gen-75n5.onrender.com/api/user/getAllPlans"
         );
         dispatch(setPlan(response.data));
         setLoading(false);
@@ -44,7 +44,7 @@ const Packages = () => {
     const loadingToast = toast.loading("Joining plan...");
     try {
       const response = await axios.post(
-        `https://gen-75n5.onrender.com/apiuser/invest/${userId}`,
+        `https://gen-75n5.onrender.com/api/user/invest/${userId}`,
         {
           planName: plan.planName,
           amount,
@@ -104,7 +104,7 @@ const Packages = () => {
 
   if (loading) {
     return (
-      <div className="flex h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
+      <div className="flex h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         <div className="flex items-center gap-3 text-white">
           <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
           <span className="text-xl">Loading Investment Plans...</span>

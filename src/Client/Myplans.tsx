@@ -34,7 +34,7 @@ const Myplans = () => {
     try {
       toast.loading("Fetching your investment plans...");
       const response = await axios.get(
-        `https://gen-75n5.onrender.com/apiuser/getAllInvestmentPlans/${userId}`,
+        `https://gen-75n5.onrender.com/api/user/getAllInvestmentPlans/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${userToken}`,
@@ -82,7 +82,7 @@ const Myplans = () => {
   };
 
   return (
-    <div className="w-full h-[100vh] scrollbar-thin overflow-y-scroll bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <div className="w-full h-[100vh] scrollbar-thin overflow-y-scroll bg-gradient-to-br from-slate-900 via-purple-900/70 to-slate-900">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -90,7 +90,7 @@ const Myplans = () => {
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="relative  w-full h-max flex flex-col px-10 phone:px-4 py-8 gap-6">
+      <div className="relative  w-full h-max flex flex-col px-10 max-md:px-4 py-8 gap-6">
         {myPlans && myPlans.length > 0 ? (
           <>
             {/* Header Section */}

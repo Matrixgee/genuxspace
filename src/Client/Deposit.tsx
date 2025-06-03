@@ -31,7 +31,7 @@ const Deposit = () => {
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
-    const apiUrl = `https://gen-75n5.onrender.com/apiuser/getPostByName/${type}`;
+    const apiUrl = `https://gen-75n5.onrender.com/api/user/getPostByName/${type}`;
 
     try {
       const response = await axios.get(apiUrl, { headers });
@@ -116,7 +116,7 @@ const Deposit = () => {
     const toastLoadingId = toast.loading("Deposit Processing...");
     try {
       const response = await axios.post(
-        "https://gen-75n5.onrender.com/apiuser/deposit",
+        "https://gen-75n5.onrender.com/api/user/deposit",
         formData,
         {
           headers: {
@@ -154,7 +154,7 @@ const Deposit = () => {
   const transactionDetails = getTransactionDetails();
 
   return (
-    <div className="h-[calc(100vh-4rem)] bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-8 px-4 overflow-y-scroll scrollbar-thin">
+    <div className="h-[calc(100vh-4rem)] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-8 px-4 overflow-y-scroll scrollbar-thin">
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -inset-10 opacity-50">

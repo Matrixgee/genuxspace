@@ -22,7 +22,7 @@ const Withdraw = () => {
   const userToken = useSelector((state: any) => state.user.token);
   const navigate = useNavigate();
   const userId = localStorage.getItem("id");
-  const url = `https://gen-75n5.onrender.com/apiuser/withdraw/${userId}`;
+  const url = `https://gen-75n5.onrender.com/api/user/withdraw/${userId}`;
 
   const headers = {
     Authorization: `Bearer ${userToken}`,
@@ -88,7 +88,7 @@ const Withdraw = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 h-[calc(100vh-4rem)] overflow-y-scroll flex items-center flex-col px-10 max-md:px-4 py-16 max-md:flex max-md:justify-center max-md:items-center relative">
+    <div className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 h-[calc(100vh-4rem)] overflow-y-scroll flex items-center flex-col px-10 max-md:px-4 py-16 max-md:flex max-md:justify-center max-md:items-center relative">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>

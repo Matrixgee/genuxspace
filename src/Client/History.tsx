@@ -23,7 +23,7 @@ const History: React.FC = () => {
     const getHistory = async () => {
       try {
         const response = await axios.get(
-          "https://gen-75n5.onrender.com/apiuser/history",
+          "https://gen-75n5.onrender.com/api/user/history",
           {
             headers: { Authorization: `Bearer ${userToken}` },
           }
@@ -94,7 +94,7 @@ const History: React.FC = () => {
     });
 
   return (
-    <div className="relative w-full h-full overflow-x-hidden overflow-y-scroll bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
+    <div className="relative w-full h-full overflow-x-hidden overflow-y-scroll bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-24 left-16 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />

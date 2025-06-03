@@ -40,7 +40,7 @@
 //     }, []);
 
 //     const getAllTransactions = async () => {
-//         const url = 'https://gen-75n5.onrender.com/apiadmin/allTransactions';
+//         const url = 'https://gen-75n5.onrender.com/api/admin/allTransactions';
 //         const headers = { Authorization: `Bearer ${userToken}` };
 //         try {
 //             const response = await axios.get(url, { headers });
@@ -83,7 +83,7 @@
 //         if (!selectedItemId) return;
 //         const toastLoadingId = toast.loading("Please wait...");
 //         setLoading(true);
-//         const url = `https://gen-75n5.onrender.com/apiadmin/approveDeposit/${selectedItemId}`;
+//         const url = `https://gen-75n5.onrender.com/api/admin/approveDeposit/${selectedItemId}`;
 //         const headers = { Authorization: `Bearer ${userToken}` };
 //         axios.put(url, {}, { headers })
 //             .then((response) => {
@@ -104,7 +104,7 @@
 //     const handleDecline = () => {
 //         const toastLoadingId = toast.loading("Please wait...");
 //         setLoading(true);
-//         const url = `https://gen-75n5.onrender.com/apiadmin/declineDeposit/${selectedItemId}`;
+//         const url = `https://gen-75n5.onrender.com/api/admin/declineDeposit/${selectedItemId}`;
 //         const headers = { Authorization: `Bearer ${userToken}` };
 //         axios.put(url, {}, { headers })
 //             .then((response) => {
@@ -170,7 +170,7 @@
 //                                         </div>
 //                                         <div className='w-[10.5rem] h-full flex items-center text-sm text-[rgb(83,104,128)] font-semibold justify-center'>
 //                                         <p
-//                                                 className={`w-max h-max px-3 py-1 phone:py-1 text-white rounded-full flex items-center justify-center ${
+//                                                 className={`w-max h-max px-3 py-1 max-md:py-1 text-white rounded-full flex items-center justify-center ${
 //                                                     item?.status === "approved"
 //                                                         ? "bg-green-400"
 //                                                         : item?.status ===

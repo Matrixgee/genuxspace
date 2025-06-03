@@ -12,7 +12,7 @@ const ForgetPassword = () => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
-  const url = "https://gen-75n5.onrender.com/apiuser/forgotPass";
+  const url = "https://gen-75n5.onrender.com/api/user/forgotPass";
   const headers = {
     Authorization: `Bearer ${userToken}`,
   };
@@ -120,7 +120,7 @@ const ForgetPassword = () => {
               isDark ? "text-purple-200" : "text-gray-500"
             }`}
           >
-            © Copyright 2024 GenuxSpace. All Rights Reserved.
+            © Copyright 2025 GenuxSpace. All Rights Reserved.
           </p>
         </div>
       </div>

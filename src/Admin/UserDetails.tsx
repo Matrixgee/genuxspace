@@ -31,7 +31,7 @@ const UserDetails = () => {
   const { _id } = useParams<{ _id: string }>();
 
   const verifyUser = async () => {
-    const verifyUrl = `https://gen-75n5.onrender.com/apiadmin/verifyUser/${_id}`;
+    const verifyUrl = `https://gen-75n5.onrender.com/api/admin/verifyUser/${_id}`;
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
@@ -46,7 +46,7 @@ const UserDetails = () => {
   };
 
   const unsuspendUser = async () => {
-    const unsuspendUrl = `https://gen-75n5.onrender.com/apiadmin/unsuspendUser/${_id}`;
+    const unsuspendUrl = `https://gen-75n5.onrender.com/api/admin/unsuspendUser/${_id}`;
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
@@ -60,7 +60,7 @@ const UserDetails = () => {
   };
 
   const suspendUser = async () => {
-    const suspendUrl = `https://gen-75n5.onrender.com/apiadmin/suspendUser/${_id}`;
+    const suspendUrl = `https://gen-75n5.onrender.com/api/admin/suspendUser/${_id}`;
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
@@ -74,7 +74,7 @@ const UserDetails = () => {
   };
 
   const deleteUser = async () => {
-    const deleteUrl = `https://gen-75n5.onrender.com/apiadmin/deleteOneUser/${_id}`;
+    const deleteUrl = `https://gen-75n5.onrender.com/api/admin/deleteOneUser/${_id}`;
     const headers = {
       Authorization: `Bearer ${userToken}`,
     };
@@ -91,7 +91,7 @@ const UserDetails = () => {
   const clearAcct = async () => {
     try {
       const response = await axios.delete(
-        `https://gen-75n5.onrender.com/apiadmin/clearAccount/${_id}`,
+        `https://gen-75n5.onrender.com/api/admin/clearAccount/${_id}`,
         {
           headers: { Authorization: `Bearer ${userToken}` },
         }
@@ -105,7 +105,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const url = `https://gen-75n5.onrender.com/apiadmin/getOne/${_id}`;
+      const url = `https://gen-75n5.onrender.com/api/admin/getOne/${_id}`;
       const headers = {
         Authorization: `Bearer ${userToken}`,
       };
