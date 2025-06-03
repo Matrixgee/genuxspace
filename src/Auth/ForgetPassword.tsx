@@ -120,7 +120,7 @@ const ForgetPassword = () => {
               isDark ? "text-purple-200" : "text-gray-500"
             }`}
           >
-            © Copyright 2024 GenuxSpace. All Rights Reserved.
+            © Copyright 2025 GenuxSpace. All Rights Reserved.
           </p>
         </div>
       </div>

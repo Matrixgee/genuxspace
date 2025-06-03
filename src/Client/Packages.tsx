@@ -104,7 +104,7 @@ const Packages = () => {
 
   if (loading) {
     return (
-      <div className="flex h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
+      <div className="flex h-screen items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         <div className="flex items-center gap-3 text-white">
           <div className="w-8 h-8 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
           <span className="text-xl">Loading Investment Plans...</span>

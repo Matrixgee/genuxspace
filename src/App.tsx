@@ -6,7 +6,9 @@ import { MainRoutes } from "./Routes/MainRoutes";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const baseUrl = "https://gen-75n5.onrender.com/api/";
+
+  const baseUrl = "https://gen-75n5.onrender.com/api";
+
 
   useEffect(() => {
     const wakeUpServer = async () => {
@@ -29,7 +31,7 @@ const App = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex items-center justify-center h-screen bg-gray-100">
         <div className="text-center">
           <img
             src={logo}

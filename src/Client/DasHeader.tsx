@@ -93,11 +93,11 @@
 //   //    */}
 
 //   return (
-//     <div className="w-[100%] h-[12%] bg-[#ffff] border-gray-100 border-b-2 justify-between flex phone:h-[10%]">
-//       <div className="w-[20%] h-[100%] hidden justify-center items-center phone:flex relative">
+//     <div className="w-[100%] h-[12%] bg-[#ffff] border-gray-100 border-b-2 justify-between flex max-md:h-[10%]">
+//       <div className="w-[20%] h-[100%] hidden justify-center items-center max-md:flex relative">
 //         <MobileMenu />
 //       </div>
-//       <div className="w-[30%] h-[100%] flex justify-around items-center phone:hidden">
+//       <div className="w-[30%] h-[100%] flex justify-around items-center max-md:hidden">
 //         <button
 //           className="w-[40%] h-[57%] bg-yellow-500 rounded-md text-white"
 //           onClick={() => navigate("/user/deposit")}
@@ -111,14 +111,14 @@
 //           Withdraw Funds
 //         </button>
 //       </div>
-//       <div className="w-[37%] h-[100%] flex justify-center items-center phone:w-[36%] phone:justify-around">
-//         <div className="w-[60%] h-[100%] flex justify-center gap-6 items-center phone:w-[90%]">
-//           <div className="w-[40px] h-[40px] bg-slate-200 rounded-full flex justify-center items-center phone:hidden">
+//       <div className="w-[37%] h-[100%] flex justify-center items-center max-md:w-[36%] max-md:justify-around">
+//         <div className="w-[60%] h-[100%] flex justify-center gap-6 items-center max-md:w-[90%]">
+//           <div className="w-[40px] h-[40px] bg-slate-200 rounded-full flex justify-center items-center max-md:hidden">
 //             <FaRegBell className="text-2xl" />
 //           </div>
-//           <div className="w-[60%] h-[50%] flex justify-around items-center phone:w-[80%]">
+//           <div className="w-[60%] h-[50%] flex justify-around items-center max-md:w-[80%]">
 //             <div
-//               className="w-[40px] h-[40px] bg-slate-300 border rounded-full flex justify-center items-center cursor-pointer phone:w-[50px] phone:h-[50px] smallPhone:w-[30px] smallPhone:h-[30px]"
+//               className="w-[40px] h-[40px] bg-slate-300 border rounded-full flex justify-center items-center cursor-pointer max-md:w-[50px] max-md:h-[50px] smallmax-md:w-[30px] smallmax-md:h-[30px]"
 //               onClick={handleUserIconClick}
 //             >
 //               {userImage ? (
@@ -138,10 +138,10 @@
 //               onChange={handleFileChange}
 //               accept="image/*"
 //             />
-//             <div className="font-semibold phone:hidden smallPhone:hidden text-slate-500 cursor-pointer">
+//             <div className="font-semibold max-md:hidden smallmax-md:hidden text-slate-500 cursor-pointer">
 //               {user?.firstName}
 //             </div>
-//             <div className="w-[10%] h-[40%] flex relative justify-center items-center phone:w-[90%]">
+//             <div className="w-[10%] h-[40%] flex relative justify-center items-center max-md:w-[90%]">
 //               <FaCaretDown
 //                 className="text-2xl cursor-pointer text-slate-500"
 //                 onClick={handleShowMenu}
@@ -159,7 +159,7 @@
 //                       <div
 //                         key={index}
 //                         className={`w-[90%] h-[20%] gap-3 rounded-md transition-all transform duration-300 cursor-pointer px-5 flex justify-start items-center hover:bg-[#CCCCCC] ${
-//                           item.mobileOnly ? "hidden phone:flex" : ""
+//                           item.mobileOnly ? "hidden max-md:flex" : ""
 //                         }`}
 //                         onClick={() => {
 //                           setShowMenu(false);

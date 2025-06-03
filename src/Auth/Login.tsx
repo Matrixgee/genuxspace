@@ -240,7 +240,7 @@ const Login = () => {
               isDark ? "text-purple-200" : "text-gray-500"
             }`}
           >
-            Copyright 2023 GenuxSpace. all rights reserved
+            © Copyright 2025 GenuxSpace.
           </p>
         </div>
       </div>

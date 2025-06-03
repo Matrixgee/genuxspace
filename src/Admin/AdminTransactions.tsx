@@ -170,7 +170,7 @@
 //                                         </div>
 //                                         <div className='w-[10.5rem] h-full flex items-center text-sm text-[rgb(83,104,128)] font-semibold justify-center'>
 //                                         <p
-//                                                 className={`w-max h-max px-3 py-1 phone:py-1 text-white rounded-full flex items-center justify-center ${
+//                                                 className={`w-max h-max px-3 py-1 max-md:py-1 text-white rounded-full flex items-center justify-center ${
 //                                                     item?.status === "approved"
 //                                                         ? "bg-green-400"
 //                                                         : item?.status ===

@@ -121,10 +121,10 @@ const UserHeader: React.FC<UserHedeprops> = ({ active, setActive }) => {
               onChange={handleFileChange}
               accept="image/*"
             />
-            <div className="font-semibold phone:hidden smallPhone:hidden text-slate-500 cursor-pointer">
+            <div className="font-semibold max-md:hidden smallmax-md:hidden text-slate-500 cursor-pointer">
               {user?.firstName}
             </div>
-            <div className="w-[10%] h-[40%] flex relative justify-center items-center phone:w-[90%]">
+            <div className="w-[10%] h-[40%] flex relative justify-center items-center max-md:w-[90%]">
               <FaCaretDown
                 className="text-2xl cursor-pointer text-slate-500"
                 onClick={handleShowMenu}
@@ -142,7 +142,7 @@ const UserHeader: React.FC<UserHedeprops> = ({ active, setActive }) => {
                       <div
                         key={index}
                         className={`w-[90%] h-[20%] gap-3 rounded-md transition-all transform duration-300 cursor-pointer px-8 flex justify-start items-center hover:bg-[#CCCCCC] ${
-                          item.mobileOnly ? "hidden phone:flex" : ""
+                          item.mobileOnly ? "hidden max-md:flex" : ""
                         }`}
                         onClick={() => {
                           setShowMenu(false);
